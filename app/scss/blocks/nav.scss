@@ -1,0 +1,19 @@
+.nav {
+  
+}
+.nav__list {
+  display: flex;
+  list-style: none;
+}
+.nav__item {
+  list-style: none;
+  margin-right: 40px;
+}
+.nav__item:last-child {
+  margin-right: 0;
+}
+.nav__link {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+}
