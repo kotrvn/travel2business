@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    $('#fullpage').fullpage( {
-        menu: '#menu',
-        navigation: false
+    $('#fullpage').fullpage({
+      menu: '#header',
+      paddingBottom: '20px'
     });
 });

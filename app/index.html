@@ -23,7 +23,7 @@
 <!--   <link rel="stylesheet" href="css/style.min.css"> -->
 </head>
 <body>
-  <header id="menu" class="page-header">
+  <header id="header" class="page-header">
       <div class="page-header__wrapper">
         <h1 class="visually-hidden">Travel2Buissnes - Регион сервиc</h1>
         <a href="#offer" class="page-header__logo">
@@ -42,18 +42,19 @@
           <a href="mailto:info@travel2business.ru" class="links-buttons__email button">info@travel2business.ru</a>
         </div>
       </div>
-    </header>
-    <main>
-      <nav id="fp-nav" class="left">
-        <ul>
-          <li><a href="#"><span></span></a></li>
-          <li><a href="#"><span></span></a></li>
-          <li><a href="#"><span></span></a></li>
-          <li><a href="#"><span></span></a></li>
-          <li><a href="#"><span></span></a></li>
-        </ul>
-      </nav>
-      <section id="section0"" class="section offer">
+  </header>
+  <main>
+    <nav id="fp-nav" class="left">
+      <ul>
+        <li><a href="#section0"><span></span></a></li>
+        <li><a href="#section1"><span></span></a></li>
+        <li><a href="#section2"><span></span></a></li>
+        <li><a href="#section3"><span></span></a></li>
+        <li><a href="#section4"><span></span></a></li>
+      </ul>
+    </nav>
+    <div id="fullpage" class="fullpage-wrapper">
+      <section id="section0" class="section offer">
         <div class="offer__wrapper">
           <h2 class="offer__title">Доверьте командировки своих сотрудников профессионалам</h2>
           <a href="#" class="offer__link button">Отправить заявку</a>
@@ -183,45 +184,96 @@
             <a href="#" class="advantages__button button">Проконсультироваться</a>
           </div>
         </div>
-        <section id="section3" class="section reviews">
-          <div class="reviews__wrapper">
-            <div class="reviews__clients clients">
-              <p class="clients__text">Вот некоторые из клиентов, которые уже получают выгоды от сотрудничества с нами</p>
-              <ul class="clients__list">
-                <li class="clients__item">
-                  <svg width="170" height="60" class="we-can__item-icon">
-                    <rect width="170" height="60" fill="#000"></rect>
-                  <svg>
-                </li>
-                <li class="clients__item">
-                  <svg width="32" height="32" class="we-can__item-icon">
-                    <rect width="32" height="32" fill="#000"></rect>
-                  <svg>
-                </li>
-                <li class="clients__item">
-                  <svg width="170" height="60" class="we-can__item-icon">
-                    <rect width="170" height="60" fill="#000"></rect>
-                  <svg>
-                </li>
-                <li class="clients__item">
-                  <svg width="170" height="60" class="we-can__item-icon">
-                    <rect width="170" height="60" fill="#000"></rect>
-                  <svg>
-                </li>
-              </ul>
-              <div class="reviews__slider review">
-                <div class="review__slide">
-                  <div class="review__img">
-                    <img src="#" alt="#">
-                  </div>
-                  <p class="review__text"></p>
-                </div>
+      </section>
+      <section id="section3" class="section reviews">
+        <div class="reviews__wrapper">
+          <div class="reviews__clients clients">
+            <p class="clients__text">Вот некоторые из клиентов, которые уже получают выгоды от сотрудничества с нами</p>
+            <ul class="clients__list">
+            <li class="clients__item">
+              <svg width="170" height="60" class="we-can__item-icon">
+                <rect width="170" height="60" fill="#000"></rect>
+              <svg>
+            </li>
+            <li class="clients__item">
+              <svg width="32" height="32" class="we-can__item-icon">
+                <rect width="32" height="32" fill="#000"></rect>
+              <svg>
+            </li>
+            <li class="clients__item">
+              <svg width="170" height="60" class="we-can__item-icon">
+                <rect width="170" height="60" fill="#000"></rect>
+              <svg>
+            </li>
+            <li class="clients__item">
+              <svg width="170" height="60" class="we-can__item-icon">
+                <rect width="170" height="60" fill="#000"></rect>
+              <svg>
+            </li>
+            </ul>
+          </div>
+          <div class="reviews__slider review">
+            <div class="review__slide">
+              <div class="review__img">
+                <img src="img/2.jpg" alt="#" width="70" height="70">
               </div>
+              <p class="review__text">«Для меня очень важно выбрать лучшее из
+               предлагаемого и при этом не выйти за рамки бюджета. Я привык 
+               четко понимать, где и за что я плачу. Выбирая работу с компанией
+               Регион-сервис, я прежде всего выбираю качество, гибкую ценовую
+               политику и уверенность в том, что мне предложат оптимальный 
+               вариант, подходящий под мои требования. А по итогу я еще получу
+               сводную отчетность по всем предоставленным услугам»</p>
+            </div>
+            <div class="review__toggle">
+              <button type="button" class="review__toggle-btn review__toggle-btn--prev"><--</button>
+              <div class="review__toggle-numbers">
+                <span class="current">1</span>/
+                <span class="all">7</span>
+              </div>
+              <button type="button" class="review__toggle-btn review__toggle-btn--next">--></button>
             </div>
           </div>
-        </section>
-
-    </main>
+        </div>
+      </section>
+      <section id="section4" class="section contacts">
+        <div class="contacts__wrapper">
+          <div class="contacts__form form">
+            <h2 class="form__title">Перезвоним</h2>
+            <form id="call-back" class="form__inputs" action="#" method="post">
+              <label class="form__lable" for="name">Ваше имя
+                <input class="form__input" type="text" id="name">
+              </label>
+              <label class="form__lable" for="phone">Номер телефона
+                <input class="form__input" type="phone" id="phone">
+              </label>
+              <label class="form__lable" for="comment">Комментарий
+                <textarea class="form__textarea" name="call-back" id="comment" rows="3"></textarea>
+              </label>
+              <label class="form__lable" for="agreement">
+                <input class="form__checkbox" id="agreement" type="checkbox">Принимаю политику конфиденциальности
+              </label>
+              <button form="call-back" type="submit" class="form__button button">Отправить заявку</button>
+            </form>
+          </div>
+          <div class="contacts__addres addres">
+            <h2 class="addres__title">Или звоните<br><a href="tel:+78126221571">+7 812 622 15 71</a></h2>
+            <a href="tel:"></a>
+            <p class="addres__text">Санкт-Петербург, ул.Профессора Попова д.23</p>
+            <a class="addres__email" href="mailto:info@travel2business.ru">info@travel2business.ru</a>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <div class="page-footer__wrapper">
+            <p class="page-footer__addres">Санкт-Петербург, ул.Профессора Попова д.23</p>
+            <a class="page-footer__email" href="mailto:info@travel2business.ru">
+            info@travel2business.ru</a>
+            <p class="page-footer__law"><a href="#">Юридичесая информация</a></p>
+          </div>
+        </footer>
+      </section>
+    </div>
+  </main>
   <script src="libs/jquery/dist/jquery.min.js"></script>
   <script src="libs/fullpage/jquery.fullpage.js"></script>
   <script src="js/main.js"></script>

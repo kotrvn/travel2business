@@ -1,15 +1,19 @@
 .page-header {
+  position: relative;
   width: auto;
   margin: 0;
+  z-index: 5600;
 }
 
 .page-header__wrapper {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 1280px;
   margin: 0 auto;
   padding: 0 55px;
+  z-index: 500;
 }
 
 .page-header__logo {
@@ -17,6 +21,7 @@
   width: 170px;
   margin-top: 45px;
   margin-right: 100px;
+  z-index: 500;
 }
 
 .page-header__navigation {
