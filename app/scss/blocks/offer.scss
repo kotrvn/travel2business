@@ -1,0 +1,52 @@
+.offer {
+  width: auto;
+  // background-image: url(../../img/header__bg.jpg);
+  // background-repeat: no-repeat; 
+  // background-position: center;
+  // background-size: cover;
+}
+
+.offer__wrapper {
+  width: 1280px;
+  margin: 0 auto;
+  padding-left: 155px;
+  padding-right: 55px;
+}
+
+.offer__title {
+  width: 600px;
+  margin-bottom: 40px;
+  font-size: 42px;
+  line-height: 54px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.offer__link {
+  display: inline-block;
+  margin-bottom: 85px;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: none;
+}
+
+.we-can {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-beetween;
+}
+
+.we-can__item {
+  display: flex;
+  width: 33%; 
+  margin-bottom: 40px;
+}
+
+.we-can__item-icon {
+  width: 49px;
+  height: 49px;
+  margin-right: 20px;
+}
+.we-can__item-text {
+  max-width: 200px;
+}

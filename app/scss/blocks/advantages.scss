@@ -1,0 +1,56 @@
+.advantages {
+  width: auto;
+}
+
+.advantages__wrapper {
+  width: 1280px;
+  margin: 0 auto;
+  padding-left: 155px;
+  padding-right: 55px;
+}
+
+.advantages__teaser {
+  width: 360px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.advantages__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  margin-bottom: 65px;
+}
+.advantages__img {
+  margin-bottom: 10px;
+}
+.advantages__title {
+  margin-bottom: 11px;
+  font-size: 18px;
+  line-height: 24px;
+  align-self: flex-start;
+}
+.advantages__text {
+  font-size: 14px;
+  line-height: 18px;
+}
+.advantages__link {
+  display: flex;
+}
+.advantages__question {
+  width: 185px;
+  margin-right: 65px;
+}
+.advantages__button {
+  display: inline-block;
+  text-transform: none;
+  font-weight: normal;
+}

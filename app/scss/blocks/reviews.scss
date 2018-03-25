@@ -1,0 +1,33 @@
+.reviews {
+  width: auto;
+}
+
+.reviews__wrapper {
+  width: 1280px;
+  margin: 0 auto;
+  padding-left: 155px;
+  padding-right: 55px;
+}
+.clients {
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.clients__text {
+  width: 680px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+.clients__list {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+}
+.clients__item {
+  display: block;
+  width: 170px;
+  height: 65px;
+  margin-right: 30px;
+  background: #000;
+}
