@@ -1,10 +1,9 @@
 .offer {
+  box-sizing: border-box;
   width: auto;
-  margin-top: -86px;
-  padding-top: 200px;
   background-image: url(../../img/header__bg.jpg);
   background-repeat: no-repeat; 
-  background-position: top center;
+  background-position: center;
   background-size: cover;
 }
 
@@ -12,12 +11,14 @@
   width: 1280px;
   margin: 0 auto;
   padding-left: 155px;
+  padding-top: 100px;
   padding-right: 55px;
 }
 
 .offer__title {
   width: 600px;
   margin-bottom: 40px;
+  color: #fff;
   font-size: 46px;
   line-height: 54px;
   font-weight: bold;
@@ -27,11 +28,17 @@
 .offer__link {
   display: inline-block;
   margin-bottom: 85px;
+  background-color: #C50B1E;
+  border: 1px solid #C50B1E;
   font-size: 16px;
   line-height: 18px;
   text-transform: none;
+  font-weight: normal;
+  transition: all .3s;
 }
-
+.offer__link:hover {
+  background-color: transparent;
+}
 .we-can {
   display: flex;
   flex-wrap: wrap;
@@ -42,6 +49,7 @@
   display: flex;
   width: 33%; 
   margin-bottom: 40px;
+  color: #fff;
 }
 
 .we-can__item-icon {
@@ -49,6 +57,11 @@
   height: 49px;
   margin-right: 20px;
 }
+
+.we-can__item svg {
+  fill: #D61C3E;
+}
 .we-can__item-text {
   max-width: 200px;
+  color: #fff;
 }

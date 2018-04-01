@@ -1,19 +1,50 @@
-.nav {
-  
-}
 .nav__list {
   display: flex;
+  justify-content: flex-start;
   list-style: none;
 }
 .nav__item {
+  display: block;
   list-style: none;
-  margin-right: 40px;
+  margin-right: 25px;
+  min-width: 95px;
 }
+
 .nav__item:last-child {
   margin-right: 0;
 }
 .nav__link {
+  position: relative;
+  display: block;
+  padding-bottom: 10px;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  сolor: #fff;
+}
+.nav__link:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #C50B1E;
+  transition: all .3s;
+}
+.nav__item:hover .nav__link:after{
+  width: 100%;
+}
+
+.nav__item.active .nav__link:after{
+  width: 100%;
+}
+
+body.fp-viewing-about .nav__link,
+body.fp-viewing-advantages .nav__link,
+body.fp-viewing-reviews .nav__link,
+body.fp-viewing-contacts .nav__link {
+  color: #000;
 }

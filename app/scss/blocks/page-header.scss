@@ -1,6 +1,9 @@
 .page-header {
-  position: relative;
-  width: auto;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
   margin: 0;
   z-index: 5600;
 }
@@ -8,29 +11,60 @@
 .page-header__wrapper {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 1280px;
   margin: 0 auto;
   padding: 0 55px;
-  z-index: 500;
+
 }
 
 .page-header__logo {
   display: block;
-  width: 170px;
+  min-width: 170px;
   margin-top: 45px;
-  margin-right: 100px;
-  z-index: 500;
+  margin-right: 130px;
+}
+
+body.fp-viewing-offer .logo__img {
+  display: none;
+}
+body.fp-viewing-offer .logo__img--dark, {
+  display: block;
+}
+
+body.fp-viewing-about .logo__img,
+body.fp-viewing-advantages .logo__img,
+body.fp-viewing-reviews .logo__img,
+body.fp-viewing-contacts .logo__img {
+  display: block;
+}
+body.fp-viewing-about .logo__img--dark,
+body.fp-viewing-advantages .logo__img--dark,
+body.fp-viewing-reviews .logo__img--dark,
+body.fp-viewing-contacts .logo__img--dark {
+  display: none;
 }
 
 .page-header__navigation {
   display: block;
-  width: 420px;
   margin-top: 50px;
-  margin-right: 30px;
+  margin-right: 40px;
 }
 .page-header__links {
   display: block;
   margin-top: 40px;
+  margin-left: auto;
 }
+@media only screen and (max-width : 1024px) {
+  .page-header__wrapper {
+    width: 960px;
+  }
+}
+
+@media only screen and (max-width : 768px) {
+  .page-header__wrapper {
+    width: 640px;
+  }
+}
+// 992px 768px 480px 320px

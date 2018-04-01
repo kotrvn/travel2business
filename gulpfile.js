@@ -11,7 +11,7 @@ var gulp         = require('gulp'), // Подключаем Gulp
     cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
     autoprefixer = require('gulp-autoprefixer'),
     spritesmith  = require('gulp.spritesmith'),
-    svgSprite    = require('gulp-svg-sprite'),
+    svgSprite    = require('gulp-svg-sprites'),
     svgmin       = require('gulp-svgmin'),
     cheerio      = require('gulp-cheerio'),
     replace      = require('gulp-replace'),
@@ -42,7 +42,7 @@ gulp.task('svgSpriteBuild', function () {
                 preview: false,
                 selector: "icon-%f",
                 svg: {
-                    symbols: 'svg-sprite.html'
+                    symbols: 'svg-sprite.svg'
                 }
             }
         ))

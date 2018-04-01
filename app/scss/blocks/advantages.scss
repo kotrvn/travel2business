@@ -1,20 +1,35 @@
 .advantages {
   width: auto;
-  padding-top: 100px;
 }
 
 .advantages__wrapper {
   width: 1280px;
   margin: 0 auto;
   padding-left: 155px;
+  padding-top: 100px;
   padding-right: 55px;
 }
-
-.advantages__teaser {
-  width: 360px;
+.advantages__topline {
+  display: flex;
+  align-items: center;
   margin-bottom: 30px;
+  
+}
+.advantages__teaser {
+  width: 580px;
+  margin-right: 165px;
+  font-style: 18px;
+  line-height: 24px;
+  font-weight: bold;
 }
 
+.advantages__button {
+  display: inline-block;
+  background-color: #c50b1e;
+  text-transform: none;
+  font-weight: normal;
+  color: #fff;
+}
 .advantages__list {
   display: flex;
   flex-wrap: wrap;
@@ -33,26 +48,17 @@
 .advantages__img {
   margin-bottom: 10px;
   align-self: flex-start;
+  fill: #fff;
 }
+
 .advantages__title {
   margin-bottom: 11px;
+  align-self: flex-start;
+  color: #000;
   font-size: 18px;
   line-height: 24px;
-  align-self: flex-start;
 }
 .advantages__text {
   font-size: 14px;
   line-height: 18px;
-}
-.advantages__link {
-  display: flex;
-}
-.advantages__question {
-  width: 185px;
-  margin-right: 65px;
-}
-.advantages__button {
-  display: inline-block;
-  text-transform: none;
-  font-weight: normal;
 }
