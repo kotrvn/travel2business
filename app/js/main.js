@@ -9,10 +9,21 @@ $(document).ready(function() {
 
     $('#clientSlider').slick({
       infinite: true,
-      slidesToShow: 3,
+      slidesToShow: 5,
       slidesToScroll: 1,
       arrows: false,
-      autoplay: true,
-      autoplaySpeed: 2000,
+      autoplay: false,
+      autoplaySpeed: 200
     });
+
+    $('#reviewSlider').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      autoplay: false,
+      autoplaySpeed: 200,
+    });
+    $('.review__toggle-btn--next').slick('slickNext');
+    $('.review__toggle-btn--prev').slick('slickPrev');
 });

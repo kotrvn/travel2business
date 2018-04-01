@@ -212,7 +212,7 @@
               </li>
             </ul>
           </div>
-          <div class="reviews__slider review">
+          <div id="reviewlider" class="reviews__slider review">
             <div class="review__slide">
               <div class="review__author">
                 <div class="review__img">
@@ -231,53 +231,75 @@
                вариант, подходящий под мои требования. А по итогу я еще получу
                сводную отчетность по всем предоставленным услугам»</p>
             </div>
+<!--             <div id="review__slide" class="review__slide">
+              <div class="review__author">
+                <div class="review__img">
+                  <img src="img/2.jpg" alt="#" width="70" height="70">
+                </div>
+                <div class="review__name name">
+                  <span class="name__item">Иван Иванович2</span>
+                  <span class="name__text">Генеральный директо</span>
+                </div>
+              </div>
+              <p class="review__text">«Для меня очень важно выбрать лучшее из
+               предлагаемого и при этом не выйти за рамки бюджета. Я привык 
+               четко понимать, где и за что я плачу. Выбирая работу с компанией
+               Регион-сервис, я прежде всего выбираю качество, гибкую ценовую
+               политику и уверенность в том, что мне предложат оптимальный 
+               вариант, подходящий под мои требования. А по итогу я еще получу
+               сводную отчетность по всем предоставленным услугам»</p>
+            </div> -->
             <div class="review__toggle">
-              <button type="button" class="review__toggle-btn review__toggle-btn--prev"><--</button>
+              <button type="button" class="review__toggle-btn review__toggle-btn--prev">
+                <svg width="14" height="30">
+                  <use xlink:href="img/svg-sprite.svg#icon-left-arrow"></use>
+                </svg>
+              </button>
               <div class="review__toggle-numbers">
                 <span class="current">1</span>/
                 <span class="all">7</span>
               </div>
-              <button type="button" class="review__toggle-btn review__toggle-btn--next">--></button>
+              <button type="button" class="review__toggle-btn review__toggle-btn--next">
+                <svg width="14" height="30">
+                  <use xlink:href="img/svg-sprite.svg#icon-right-arrow"></use>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
       </section>
       <section id="section4 contacts" class="section contacts">
         <div class="contacts__wrapper">
-          <div class="contacts__addres addres">
-            <h2 class="addres__title">Или звоните<br><a href="tel:+78126221571">+7 812 622 15 71</a></h2>
-            <a href="tel:"></a>
-            <p class="addres__text">Санкт-Петербург, ул.Профессора Попова д.23</p>
-            <a class="addres__email" href="mailto:info@travel2business.ru">info@travel2business.ru</a>
+          <div class="contacts__item">
+            <h2 class="contacts__title">Контакты</h2>
+            <p class="contacts__text"><span>Адрес:</span>Санкт-Петербург, ул.Профессора Попова д.23</p>
+            <a class="contacts__phone" href="tel:+78126221571">
+              <span>Телефон</span>+7(812)-622-15-71</a>
+            <a class="contacts__email" href="mailto:info@travel2business.ru">
+              <span>email</span>info@travel2business.ru</a>
           </div>
           <div class="contacts__form form">
-            <h2 class="form__title"></h2>
             <form id="call-back" class="form__inputs" action="#" method="post">
+              <h2 class="form__title">С радостью перезвоним</h2>
               <label class="form__lable" for="name">Ваше имя
                 <input class="form__input" type="text" id="name">
               </label>
               <label class="form__lable" for="phone">Номер телефона
                 <input class="form__input" type="phone" id="phone">
               </label>
-              <label class="form__lable" for="comment">Комментарий
-                <textarea class="form__textarea" name="call-back" id="comment" rows="3"></textarea>
+              <label class="form__lable" for="comment">Cообщение
+                <textarea class="form__textarea" name="call-back" id="comment" rows="1"></textarea>
               </label>
               <label class="form__lable" for="agreement">
                 <input class="form__checkbox" id="agreement" type="checkbox">Принимаю политику конфиденциальности
               </label>
-              <button form="call-back" type="submit" class="form__button button">Отправить заявку</button>
+              <button form="call-back" type="submit" class="form__button button">Перезвоните</button>
             </form>
           </div>
-          <div class="contacts__map"></div>
-        </div>
-        <footer class="page-footer">
-          <div class="page-footer__wrapper">
-            <p class="page-footer__addres">Санкт-Петербург, ул.Профессора Попова д.23</p>
-            <a class="page-footer__email" href="mailto:info@travel2business.ru">
-            info@travel2business.ru</a>
-            <p class="page-footer__law"><a href="#">Юридичесая информация</a></p>
+          <div class="contacts__map">
+            <img src="img/map.png" alt="Регион сервис - адрес">
           </div>
-        </footer>
+        </div>
       </section>
     </div>
   </main>

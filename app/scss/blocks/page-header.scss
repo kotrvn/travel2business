@@ -23,7 +23,6 @@
   display: block;
   min-width: 170px;
   margin-top: 45px;
-  margin-right: 130px;
 }
 
 body.fp-viewing-offer .logo__img {
@@ -48,13 +47,13 @@ body.fp-viewing-contacts .logo__img--dark {
 
 .page-header__navigation {
   display: block;
+  margin-left: auto;
   margin-top: 50px;
   margin-right: 40px;
 }
 .page-header__links {
   display: block;
   margin-top: 40px;
-  margin-left: auto;
 }
 @media only screen and (max-width : 1024px) {
   .page-header__wrapper {

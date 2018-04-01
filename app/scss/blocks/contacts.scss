@@ -4,18 +4,30 @@
 }
 
 .contacts__wrapper {
+  position: relative;
   display: flex;
   width: 1280px;
   margin: 0 auto;
   padding-left: 155px;
   padding-top: 100px;
-  padding-right: 55px;
+  padding-bottom: 50px;
 }
 
 .form {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  right: 50%;
+  display: block;
+  padding: 10px;
+  margin: 0 auto;
   width: 370px;
-  margin-right: 230px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  transform: translateX(-135px);
+  background-color: #fff;
   text-align: left;
+  z-index: 5;
+
 }
 .form__title {
   margin-bottom: 25px;
@@ -31,15 +43,15 @@
   display: block;
   font-size: 16px;
   line-height: 22px;
-  margin-bottom: 5px;
+  margin-bottom: -15px;
 }
 
 .form__input {
   display: block;
-  width: 370px;
+  width: 288px;
   margin-bottom: 15px;
-  border-radius: 6px;
-  border: solid 1px #979797;
+  border: none;
+  border-bottom: solid 1px #979797;
   padding: 5px 12px;
   font-size: 16px;
   line-height: 22px;
@@ -47,10 +59,10 @@
 }
 .form__textarea {
   display: block;
-  width: 370px;
+  width: 288px;
   margin-bottom: 20px;
-  border-radius: 6px;
-  border: solid 1px #979797;
+  border: none;
+  border-bottom: solid 1px #979797;
   padding: 5px 12px;
   font-size: 16px;
   line-height: 22px;
@@ -70,26 +82,64 @@
   display: inline-block;
   margin-top: 25px;
   background: none;
-  border: solid 1px #000000;
+  border: solid 1px transparent;
+  background-color: #C50B1E;
+  color: #fff;
   font-size: 16px;
   line-height: 22px;
   text-transform: none;
   font-weight: normal;
 }
 
-.addres__title { 
+.contacts__title { 
   margin-bottom: 25px;
   font-size: 28px;
   line-height: 38px;
 }
 
-.addres__text {
-  margin-bottom: 29px;
+.contacts__text {
+  width: 250px;
+  margin-bottom: 30px;
   font-size: 16px;
   line-height: 22px;
 }
-.addres__email {
+
+.contacts__text span {
   display: block;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+.contacts__phone {
+  display: block;
+  width: 250px;
+  margin-bottom: 30px;
   font-size: 16px;
   line-height: 22px;
+  color: #000;
+}
+.contacts__phone span {
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+.contacts__email {
+  display: block;
+  width: 250px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000;
+}
+.contacts__email span {
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+.contacts__map {
+  width: 50%;
+  height: 100vh;
+  margin-left: auto;
+  margin-bottom: 40px;
 }

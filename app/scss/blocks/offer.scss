@@ -47,14 +47,15 @@
 
 .we-can__item {
   display: flex;
+  align-items: center;
   width: 33%; 
   margin-bottom: 40px;
   color: #fff;
 }
 
 .we-can__item-icon {
-  width: 49px;
-  height: 49px;
+  width: 60px;
+  height: 50px;
   margin-right: 20px;
 }
 
