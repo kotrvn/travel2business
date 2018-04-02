@@ -3,9 +3,14 @@
     <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
     <title>005-car</title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
+    <defs>
+        <linearGradient x1="114.499237%" y1="137.059687%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#676969" offset="0%"></stop>
+            <stop stop-color="#02141E" offset="100%"></stop>
+        </linearGradient>
+    </defs>
     <g id="Artboard-Copy-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-854.000000, -522.000000)">
-        <g id="траст.-символы" transform="translate(155.000000, 493.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#02141E" stroke-width="1.5">
+        <g id="траст.-символы" transform="translate(155.000000, 493.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="url(#linearGradient-1)" stroke-width="1.5">
             <g id="Group-13" transform="translate(337.000000, 0.000000)">
                 <g id="Group-26" transform="translate(363.000000, 22.000000)">
                     <g id="Group-15">

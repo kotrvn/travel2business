@@ -189,7 +189,7 @@
       </section>
       <section id="section3 reviews" class="section reviews">
         <div class="reviews__wrapper">
-          <div class="reviews__clients clients">
+<!--           <div class="reviews__clients clients">
             <p class="clients__text">Что клиенты говорят об удобстве работы с нами</p>
             <ul id="clientSlider" class="clients__list">
               <li class="clients__item">
@@ -211,8 +211,8 @@
                 <img src="img/clients/4.png" alt="lukoi" width="190" height="45">
               </li>
             </ul>
-          </div>
-          <div id="reviewlider" class="reviews__slider review">
+          </div> -->
+          <div id="reviewSlider" class="reviews__slider review">
             <div class="review__slide">
               <div class="review__author">
                 <div class="review__img">
@@ -231,7 +231,7 @@
                вариант, подходящий под мои требования. А по итогу я еще получу
                сводную отчетность по всем предоставленным услугам»</p>
             </div>
-<!--             <div id="review__slide" class="review__slide">
+            <div id="review__slide" class="review__slide">
               <div class="review__author">
                 <div class="review__img">
                   <img src="img/2.jpg" alt="#" width="70" height="70">
@@ -248,7 +248,7 @@
                политику и уверенность в том, что мне предложат оптимальный 
                вариант, подходящий под мои требования. А по итогу я еще получу
                сводную отчетность по всем предоставленным услугам»</p>
-            </div> -->
+            </div>
             <div class="review__toggle">
               <button type="button" class="review__toggle-btn review__toggle-btn--prev">
                 <svg width="14" height="30">
@@ -277,23 +277,35 @@
               <span>Телефон</span>+7(812)-622-15-71</a>
             <a class="contacts__email" href="mailto:info@travel2business.ru">
               <span>email</span>info@travel2business.ru</a>
+            <div class="contacts__social social">
+              <ul class="social__list">
+                <li class="social__item"><a href="#" class="social__link social__link--vk"></a></li>
+                <li class="social__item"><a href="#" class="social__link social__link--instagram"></a></li>
+                <li class="social__item"><a href="#" class="social__link social__link--facebook"></a></li>
+              </ul>
+              <div class="social__private">
+                <a href="#">Политика конфеденциальности</a>
+              </div>
+            </div>
           </div>
           <div class="contacts__form form">
             <form id="call-back" class="form__inputs" action="#" method="post">
-              <h2 class="form__title">С радостью перезвоним</h2>
-              <label class="form__lable" for="name">Ваше имя
-                <input class="form__input" type="text" id="name">
+              <h2 class="form__title">С радостью перезвоним!</h2>
+              <label class="form__lable" for="name">
+                <input class="form__input" type="text" id="name" placeholder="Ваше имя">
               </label>
-              <label class="form__lable" for="phone">Номер телефона
-                <input class="form__input" type="phone" id="phone">
+              <label class="form__lable" for="phone">
+                <input class="form__input" type="tel" id="phone" placeholder="Ваш телефон">
               </label>
-              <label class="form__lable" for="comment">Cообщение
-                <textarea class="form__textarea" name="call-back" id="comment" rows="1"></textarea>
+              <label class="form__lable" for="email">
+                <input class="form__input" type="tel" id="email" placeholder="Ваша почта">
               </label>
-              <label class="form__lable" for="agreement">
-                <input class="form__checkbox" id="agreement" type="checkbox">Принимаю политику конфиденциальности
+              <label class="form__lable" for="comment">Сообщение
+                <textarea class="form__textarea" name="call-back" id="comment" rows="3"></textarea>
               </label>
-              <button form="call-back" type="submit" class="form__button button">Перезвоните</button>
+              <input class="form__checkbox" id="agreement" type="checkbox">
+              <label class="form__check-lable" for="agreement">Принимаю политику конфиденциальности</label>
+              <button form="call-back" type="submit" class="form__button button">Отправить заявку</button>
             </form>
           </div>
           <div class="contacts__map">

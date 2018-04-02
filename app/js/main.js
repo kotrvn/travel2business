@@ -20,10 +20,10 @@ $(document).ready(function() {
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: false,
+      arrows: true,
       autoplay: false,
       autoplaySpeed: 200,
+      nextArrow: '<button type="button" class="review__toggle-btn--next"></button>',
+      prevArrow: '<button type="button" class="review__toggle-btn--prev"></button>'
     });
-    $('.review__toggle-btn--next').slick('slickNext');
-    $('.review__toggle-btn--prev').slick('slickPrev');
 });
