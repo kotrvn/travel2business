@@ -21,7 +21,7 @@
 
 .page-header__logo {
   display: block;
-  min-width: 170px;
+  width: 170px;
   margin-top: 45px;
 }
 
@@ -45,6 +45,40 @@ body.fp-viewing-contacts .logo__img--dark {
   display: none;
 }
 
+body.fp-viewing-about .page-header,
+body.fp-viewing-advantages .page-header,
+body.fp-viewing-reviews .page-header,
+body.fp-viewing-contacts .page-header {
+  background-color: #fff;
+  animation: bgfill 1s ease;
+}
+body.fp-viewing-contacts .page-header {
+  background-color: transparent;
+  animation: bgfillback .5s ease;
+}
+@keyframes bgfill {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+@keyframes bgfillback {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
 .page-header__navigation {
   display: block;
   margin-left: auto;
@@ -57,7 +91,17 @@ body.fp-viewing-contacts .logo__img--dark {
 }
 @media only screen and (max-width : 1024px) {
   .page-header__wrapper {
-    width: 960px;
+    width: 1024px;
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .page-header__logo {
+    width: 140px;
+  }
+  #fp-nav.left {
+    left: 30px;
   }
 }
 

@@ -15,7 +15,7 @@
 .nav__link {
   position: relative;
   display: block;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -46,4 +46,14 @@ body.fp-viewing-advantages .nav__link,
 body.fp-viewing-reviews .nav__link,
 body.fp-viewing-contacts .nav__link {
   color: #000;
+}
+
+@media only screen and (max-width : 1024px) {
+  .nav__item {
+    margin-right: 20px;
+  }
+  .nav__link {
+    font-size: 14px;
+    line-height: 19px;
+  }
 }

@@ -52,33 +52,70 @@
 
 .about__stats {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 
 }
 .about__stats p {
-  margin-right: 45px;
+  width: 146px;
+  margin-right: 5px;
   text-align: left;
 }
 .about__stats span {
   display: block;
   margin-bottom: 5px;
-  font-size: 38px;
-  line-height: 50px;
+  font-size: 36px;
+  line-height: 47px;
 
 }
 
 .about__link {
+  margin-top: 40px;
   margin-bottom: 30px;
   display: inline-block;
   margin-bottom: 85px;
+  padding: 10px 20px;
   background-color: #c50b1e;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 18px;
   text-transform: none;
   font-weight: normal;
 }
 
 .about__img {
   align-self: flex-start;
-  margin-bottom: 30px;
+  margin-bottom: 14px;
+}
+
+@media only screen and (max-width : 1024px) {
+  .about__wrapper {
+    justify-content: flex-start;
+    width: 1024px;
+    margin: 0 auto;
+    padding-left: 135px;
+    padding-top: 100px;
+    padding-right: 42px;
+  }
+  .about__left-col {
+    width: 460px;
+    margin-right: 25px;
+  }
+  .about__right-col {
+    width: 350px;
+  }
+  .about__text {
+    font-size: 14px;
+  }
+  .about__stats p {
+    width: 111px;
+    margin-right: 5px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 19px;
+    }
+  .about__stats span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 30px;
+    line-height: 41px;
+  }
 }

@@ -24,3 +24,14 @@ body.fp-viewing-reviews .links-buttons__email,
 body.fp-viewing-contacts .links-buttons__email  {
   color: #000;
 }
+
+@media only screen and (max-width : 1024px) {
+  .links-buttons__phone {
+    width: 132px;
+  }
+  .links-buttons__phone,
+  .links-buttons__email {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}

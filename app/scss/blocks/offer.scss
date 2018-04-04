@@ -1,7 +1,6 @@
 .offer {
   box-sizing: border-box;
   width: auto;
-  background-image: url(../../img/header__bg.jpg);
   background-repeat: no-repeat; 
   background-position: center;
   background-size: cover;
@@ -28,8 +27,8 @@
 .offer__link {
   display: inline-block;
   margin-bottom: 85px;
+  padding: 10px 20px;
   background-color: #C50B1E;
-  border: 1px solid #C50B1E;
   font-size: 16px;
   line-height: 18px;
   text-transform: none;
@@ -37,8 +36,9 @@
   transition: all .3s;
 }
 .offer__link:hover {
-  background-color: transparent;
+  background-color: #d73a4a;
 }
+
 .we-can {
   display: flex;
   flex-wrap: wrap;
@@ -63,6 +63,20 @@
   fill: #D61C3E;
 }
 .we-can__item-text {
-  max-width: 200px;
+  max-width: 215px;
   color: #fff;
+}
+
+@media only screen and (max-width : 1024px) {
+  .offer__wrapper {
+    width: 1024px;
+    margin: 0 auto;
+    padding-left: 75px;
+    padding-top: 100px;
+    padding-right: 42px;
+  }
+  .offer__title,
+  .offer__link {
+    margin-left: 60px;
+  }
 }

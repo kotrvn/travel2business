@@ -35,7 +35,12 @@ img {
   font-weight: bold;
 }
 .button:hover {
-  background: #C50B1E;
-  border-color: trasparent;
+  background: #d73a4a;
+  border: 1px solid #d73a4a;
   color: #fff;
+}
+
+.button:active {
+  background-color: #b51828;
+  border: 1px solid #b51828;
 }

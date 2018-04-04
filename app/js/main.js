@@ -12,18 +12,32 @@ $(document).ready(function() {
       slidesToShow: 5,
       slidesToScroll: 1,
       arrows: false,
-      autoplay: false,
-      autoplaySpeed: 200
+      autoplay: true,
+      autoplaySpeed: 2000
     });
 
     $('#reviewSlider').slick({
       infinite: true,
+      initialSlide: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: true,
-      autoplay: false,
-      autoplaySpeed: 200,
-      nextArrow: '<button type="button" class="review__toggle-btn--next"></button>',
-      prevArrow: '<button type="button" class="review__toggle-btn--prev"></button>'
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 2000,
     });
+    $('#jsSliderPrev').on('click', function() {
+      $('#reviewSlider').slick('slickNext');
+    });
+    $('#jsSliderNext').on('click', function() {
+      $('#reviewSlider').slick('slickPrev');
+    });
+
+      var $status = $('#result');
+      var $slickElement = $('#reviewSlider');
+
+      $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+          //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+          var i = (currentSlide ? currentSlide : 0) + 1;
+          $status.text(i + '/' + slick.slideCount);
+      });
 });
