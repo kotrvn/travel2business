@@ -4,8 +4,9 @@ $(document).ready(function() {
       responsiveWidth: 768,
       anchors: ['offer', 'about', 'advantages', 'reviews', 'contacts'],
       scrollOverflow: true,
-      navigation: true
+      navigation: true,
     });
+
 
     $('#clientSlider').slick({
       infinite: true,
@@ -22,7 +23,7 @@ $(document).ready(function() {
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 2000,
     });
     $('#jsSliderPrev').on('click', function() {
@@ -40,4 +41,26 @@ $(document).ready(function() {
           var i = (currentSlide ? currentSlide : 0) + 1;
           $status.text(i + '/' + slick.slideCount);
       });
+
+    $('advantageSlider').slick({
+      mobileFirst: true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      autoplay: false,
+      responsive: [
+        {
+          breakpoint: 568,
+          settings: 'unslick'
+        }
+      ]
+    });
+
+
+
+    $('.menu-btn').on('click', function(e) {
+      $('.burger').toggleClass('active');
+      $('.m-menu').toggleClass('m-menu-show');
+    });
 });

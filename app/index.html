@@ -38,6 +38,19 @@
             <li data-menuanchor="contacts" class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
           </ul>
         </nav>
+        <div class="mobile-menu js-mobile-menu">
+          <button class="menu-btn">
+            <span class="burger"></span>
+          </button>
+          <div class="m-menu">
+            <ul class="m-menu__list">
+              <li data-menuanchor="about" class="m-menu__item"><a href="#about" class="m-menu__link">О компании</a></li>
+              <li data-menuanchor="advantages" class="m-menu__item"><a href="#advantages" class="m-menu__link">Почему мы</a></li>
+              <li data-menuanchor="reviews" class="m-menu__item"><a href="#reviews" class="m-menu__link">Отзывы</a></li>
+              <li data-menuanchor="contacts" class="m-menu__item"><a href="#contacts" class="m-menu__link">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
         <div class="page-header__links links-buttons">
           <a href="tel:+7(812)6221571" class="links-buttons__phone button">+7 812 622 15 71</a>
           <a href="mailto:info@travel2business.ru" class="links-buttons__email button">info@travel2business.ru</a>
@@ -93,12 +106,55 @@
           </div>
         </div>
       </section>
+      <secton class="offer-mobile">
+        <div class="offer-mobile__wrapper">
+          <h2 class="offer-mobile__title">Наши услуги</h2>
+          <div class="offer-mobile__list">
+            <div class="offer-mobile__item">
+              <svg width="32" height="32" class="offer-mobile__item-icon">
+                <use xlink:href="img/svg-sprite.svg#icon-hotel"></use>
+              <svg>
+              <p class="offer-mobile__item-text">Размещение в гостиницах по России и за рубежом</p>
+            </div>
+            <div class="offer-mobile__item">
+              <svg width="68" height="30" class="offer-mobile__item-icon">
+                <use xlink:href="img/svg-sprite.svg#icon-car"></use>
+              <svg>
+              <p class="offer-mobile__item-text">Транспортное<br> обслуживание</p>
+            </div>
+            <div class="offer-mobile__item">
+              <svg width="32" height="32" class="offer-mobile__item-icon">
+                <use xlink:href="img/svg-sprite.svg#icon-plane"></use>
+              <svg>
+              <p class="offer-mobile__item-text">Авиабилеты и железнодорожные билеты</p>
+            </div>
+            <div class="offer-mobile__item">
+              <svg width="32" height="32" class="offer-mobile__item-icon">
+                <use xlink:href="img/svg-sprite.svg#icon-case"></use>
+              <svg>
+              <p class="offer-mobile__item-text">Организация деловых мероприятий (MICE)</p>
+            </div>
+            <div class="offer-mobile__item">
+              <svg width="32" height="32" class="offer-mobile__item-icon">
+                <use xlink:href="img/svg-sprite.svg#icon-museum"></use>
+              <svg>
+              <p class="offer-mobile__item-text">Культурно-развлекательные программы</p>
+            </div>
+            <div class="offer-mobile__item">
+              <svg width="32" height="32" class="offer-mobile__item-icon">
+                <use xlink:href="img/svg-sprite.svg#icon-corp"></use>
+              <svg>
+              <p class="offer-mobile__item-text">Корпоративные обучающие программы </p>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="section1 about" class="section about">
         <div class="about__wrapper">
           <h2 class="about__title">О компании</h2>
           <div class="about__left-col">
             <div class="about__text">
-            <p>Сегодня деловой туризм становится все более востребованным. Командировки
+            <p class="about__text-header">Сегодня деловой туризм становится все более востребованным. Командировки
              в филиалы, профессиональные конференции, обучение в других городах 
            – это лишь малый перечень того, когда компании сталкиваются с необходимостью
             организации деловых поездок. Поэтому многие компании, чтобы не обременять
@@ -131,57 +187,63 @@
           <div class="advantages__topline">
             <p class="advantages__teaser">С нами удобно и надежно. Индивидуальный
              подход к каждому клиенту и готовность помочь в любую минуту.</p>
+             <p class="advantages__teaser-mobile">Наши преимущества</p>
               <a href="#" class="advantages__button button">Отправить заявку</a>
           </div>
-          <div class="advantages__list">
-            <div class="advantages__item">
-              <svg width="50" height="50" class="advantages__img">
-                <use xlink:href="img/svg-sprite.svg#icon-prof"></use>
-              </svg>
-              <h3 class="advantages__title">Профессиональный подход</h3>
-              <p class="advantages__text">Команда профессионалов в сфеределового
-               туризма поможет в организации поездок ваших  сотрудников.</p>
-
+          <div class="advantages__list mobile-slider">
+            <div id="advantageSlider" class="mobile-slider__wrap">
+              <div class="advantages__item">
+                <svg width="50" height="50" class="advantages__img">
+                  <use xlink:href="img/svg-sprite.svg#icon-prof"></use>
+                </svg>
+                <h3 class="advantages__title">Профессиональный подход</h3>
+                <p class="advantages__text">Команда профессионалов в сфеределового
+                 туризма поможет в организации поездок ваших  сотрудников.</p>
+              </div>
+              <div class="advantages__item">
+                <svg width="50" height="50" class="advantages__img">
+                  <use xlink:href="img/svg-sprite.svg#icon-like"></use>
+                </svg>
+                <h3 class="advantages__title">Все услуги в «одном окне»</h3>
+                <p class="advantages__text">Экономия времени за счет коммуникации 
+                с одним поставщиком услуг по всем организационным вопросам.</p>
+              </div>
             </div>
-            <div class="advantages__item">
-              <svg width="50" height="50" class="advantages__img">
-                <use xlink:href="img/svg-sprite.svg#icon-like"></use>
-              </svg>
-              <h3 class="advantages__title">Все услуги в «одном окне»</h3>
-              <p class="advantages__text">Экономия времени за счет коммуникации 
-              с одним поставщиком услуг по всем организационным вопросам.</p>
+            <div class="mobile-slider__wrap">
+              <div class="advantages__item">
+                <svg width="50" height="50" class="advantages__img">
+                  <use xlink:href="img/svg-sprite.svg#icon-time"></use>
+                </svg>
+                <h3 class="advantages__title">Персональный менеджер</h3>
+                <p class="advantages__text">Помощь и консультирование по вопросам 
+                выбора и бронирования услуг.</p>
+              </div>
+              <div class="advantages__item">
+                <svg width="50" height="50" class="advantages__img">
+                  <use xlink:href="img/svg-sprite.svg#icon-list"></use>
+                </svg>
+                <h3 class="advantages__title">Порядок в документах</h3>
+                <p class="advantages__text">Согласовываем и предоставляем все 
+                  необходимые закрывающие документы бухгалтерии заказчика.</p>
+              </div>
             </div>
-            <div class="advantages__item">
-              <svg width="50" height="50" class="advantages__img">
-                <use xlink:href="img/svg-sprite.svg#icon-time"></use>
-              </svg>
-              <h3 class="advantages__title">Персональный менеджер</h3>
-              <p class="advantages__text">Помощь и консультирование по вопросам 
-              выбора и бронирования услуг.</p>
-            </div>
-            <div class="advantages__item">
-              <svg width="50" height="50" class="advantages__img">
-                <use xlink:href="img/svg-sprite.svg#icon-list"></use>
-              </svg>
-              <h3 class="advantages__title">Порядок в документах</h3>
-              <p class="advantages__text">Согласовываем и предоставляем все 
-                необходимые закрывающие документы бухгалтерии заказчика.</p>
-            </div>
-            <div class="advantages__item">
-              <svg width="50" height="50" class="advantages__img">
-                <use xlink:href="img/svg-sprite.svg#icon-noun"></use>
-              </svg>
-              <h3 class="advantages__title">Оптимизация затрат</h3>
-              <p class="advantages__text">Сокращение административных расходов 
-              заказчика за счет подбора оптимальных вариантов бронирования.</p>
-            </div>
-            <div class="advantages__item">
-              <svg width="50" height="50" class="advantages__img">
-                <use xlink:href="img/svg-sprite.svg#icon-wallet"></use>
-              </svg>
-              <h3 class="advantages__title">Удобная форма оплаты</h3>
-              <p class="advantages__text">Принимаем оплату наличными, б/нал, 
-              кредитными картами. Возможна отсрочка платежа.</p>
+            <div class="mobile-slider__wrap">
+              <div class="advantages__item">
+                <svg width="50" height="50" class="advantages__img">
+                  <use xlink:href="img/svg-sprite.svg#icon-noun"></use>
+                </svg>
+                <h3 class="advantages__title">Оптимизация затрат</h3>
+                <p class="advantages__text">Сокращение административных расходов 
+                заказчика за счет подбора оптимальных вариантов бронирования.</p>
+              </div>
+              <div class="advantages__item">
+                <svg width="50" height="50" class="advantages__img">
+                  <use xlink:href="img/svg-sprite.svg#icon-wallet"></use>
+                </svg>
+                <h3 class="advantages__title">Удобная форма оплаты</h3>
+                <p class="advantages__text">Принимаем оплату наличными, б/нал, 
+                кредитными картами. Возможна отсрочка платежа.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -189,6 +251,7 @@
       <section id="section3 reviews" class="section reviews">
         <div class="reviews__wrapper">
           <h2 class="reviews__title">Клиенты об успешном опыте работы с нами</h2>
+          <p class="reviews__title-mobile">Отзывы</p>
           <div id="reviewSlider" class="reviews__slider review">
             <div class="review__slide">
               <div class="review__author">
@@ -197,7 +260,7 @@
                 </div>
                 <div class="review__name name">
                   <span class="name__item">Иван Cергеевич</span>
-                  <span class="name__text">Генеральный директо</span>
+                  <span class="name__text">Генеральный директор</span>
                 </div>
               </div>
               <p class="review__text">«Для меня очень важно выбрать лучшее из
@@ -207,8 +270,12 @@
                политику и уверенность в том, что мне предложат оптимальный 
                вариант, подходящий под мои требования. А по итогу я еще получу
                сводную отчетность по всем предоставленным услугам»</p>
+              <div class="review__name-mobile name">
+                <span class="name__item">Иван Cергеевич</span>
+                <span class="name__text">Генеральный директор</span>
+              </div>
             </div>
-            <div id="review__slide" class="review__slide">
+            <div class="review__slide">
               <div class="review__author">
                 <div class="review__img">
                   <img src="img/2.jpg" alt="#" width="70" height="70">
@@ -270,11 +337,11 @@
         <div class="contacts__wrapper">
           <div class="contacts__item">
             <h2 class="contacts__title">Контакты</h2>
-            <p class="contacts__text"><span>Адрес:</span>Санкт-Петербург,<br> ул.Профессора Попова д.23</p>
+            <p class="contacts__text"><span>Адрес</span>Санкт-Петербург,<br> ул.Профессора Попова д.23</p>
             <a class="contacts__phone" href="tel:+78126221571">
               <span>Телефон</span>+7 (812) 622 15 71</a>
             <a class="contacts__email" href="mailto:info@travel2business.ru">
-              <span>email</span>info@travel2business.ru</a>
+              <span>e-mail</span>info@travel2business.ru</a>
             <div class="contacts__social social">
               <ul class="social__list">
                 <li class="social__item"><a href="#" class="social__link social__link--vk">
@@ -301,6 +368,7 @@
           <div class="contacts__form form">
             <form id="call-back" class="form__inputs" action="#" method="post">
               <h2 class="form__title">С радостью перезвоним!</h2>
+              <h2 class="form__title-mobile">Оставить заявку</h2>
               <label class="form__lable" for="name">
                 <input class="form__input" type="text" id="name" placeholder="Ваше имя">
               </label>

@@ -85,12 +85,15 @@
 
 }
 .form__title {
+  display: block;
   margin: 0 auto;
   margin-bottom: 25px;
   font-size: 24px;
   line-height: 33px;
   font-weight: normal;
-
+}
+.form__title-mobile {
+  display: none;
 }
 .form__inputs {
   display: flex;
@@ -260,6 +263,9 @@
   width: 30px;
   height: 30px;
 }
+.social__link:hover {
+  opacity: .4;
+}
 .social__private {
   margin-top: 150px;
 }
@@ -268,7 +274,7 @@
   color: #000;
 }
 
-@media only screen and (max-width : 1024px) {
+@media only screen and (min-width : 960px) and (max-width : 1024px) {
   .contacts__wrapper {
     display: flex;
     width: 1024px;
@@ -276,5 +282,69 @@
     padding-left: 135px;
     padding-top: 100px;
     padding-right: 55px;
+  }
+  .form__title {
+    display: block;
+  }
+  .form__title-mobile {
+    display: none;
+  }
+}
+@media only screen and (min-width : 640px) and (max-width : 959px) {
+  .contacts__wrapper {
+    width: auto;
+    padding: 50px 30px 0;
+  }
+}
+@media only screen and (min-width : 320px)and (max-width : 639px) {
+  .contacts {
+    width: auto;
+    background-color: #fff;
+  }
+  .contacts__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 70px 20px 0;
+  }
+  .contacts__item {
+    order: 1;
+  }
+  .contacts__item span {
+    display: none;
+  }
+  .contacts__map {
+    display: none;
+  }
+  .contacts__form {
+    position: static;
+    transform: none;
+    width: 100%;
+    display: block;
+    padding: 0;
+    margin-bottom: 60px;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: #fff;
+    text-align: left;
+    z-index: 5;
+    }
+  .form__title {
+    display: none;
+  }
+  .form__title-mobile {
+    display: block;
+    margin-top: 40px;
+    font-size: 24px;
+    line-height: 33px;
+    font-weight: normal;
+  }
+  .contacts__title {
+    display: none;
+  }
+  .social__private {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 25px;
   }
 }

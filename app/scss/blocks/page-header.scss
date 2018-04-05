@@ -46,10 +46,14 @@ body.fp-viewing-contacts .logo__img--dark {
 }
 
 body.fp-viewing-about .page-header,
-body.fp-viewing-advantages .page-header,
-body.fp-viewing-reviews .page-header,
-body.fp-viewing-contacts .page-header {
+body.fp-viewing-reviews .page-header, {
   background-color: #fff;
+  animation: bgfill 1s ease;
+}
+
+body.fp-viewing-advantages .page-header,
+body.fp-viewing-contacts .page-header {
+  background-color: #f9f9f9;
   animation: bgfill 1s ease;
 }
 body.fp-viewing-contacts .page-header {
@@ -89,10 +93,9 @@ body.fp-viewing-contacts .page-header {
   display: block;
   margin-top: 40px;
 }
-@media only screen and (max-width : 1024px) {
+@media only screen and (min-width : 960px) and (max-width : 1024px) {
   .page-header__wrapper {
     width: 1024px;
-    width: 1280px;
     margin: 0 auto;
     padding: 0 40px;
   }
@@ -104,10 +107,37 @@ body.fp-viewing-contacts .page-header {
     left: 30px;
   }
 }
-
-@media only screen and (max-width : 768px) {
+@media only screen and (min-width : 640px) and (max-width : 959px) {
   .page-header__wrapper {
-    width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .page-header__logo {
+    margin-top: 30px;
+  }
+  .page-header__navigation {
+    display: none;
+  }
+  .page-header__links {
+    display: none;
   }
 }
-// 992px 768px 480px 320px
+@media only screen and (min-width : 320px)and (max-width : 639px) {
+  .page-header__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .page-header__logo {
+    margin-top: 30px;
+  }
+  .page-header__navigation {
+    display: none;
+  }
+  .page-header__links {
+    display: none;
+  }
+}
+
+

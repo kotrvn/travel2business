@@ -86,7 +86,7 @@
   margin-bottom: 14px;
 }
 
-@media only screen and (max-width : 1024px) {
+@media only screen and (min-width : 960px) and (max-width : 1024px) {
   .about__wrapper {
     justify-content: flex-start;
     width: 1024px;
@@ -108,6 +108,127 @@
   .about__stats p {
     width: 111px;
     margin-right: 5px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 19px;
+    }
+  .about__stats span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 30px;
+    line-height: 41px;
+  }
+}
+@media only screen and (min-width : 640px) and (max-width : 959px) {
+  .about__wrapper {
+    display: block;
+    width: auto;
+    padding: 50px 30px 0;
+  }
+  .about__title {
+    display: inline-block;
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: normal;
+  }
+  .about__title:after {
+    content: '';
+    display: block;
+    width: 142px;
+    height: 3px;
+    margin-top: 5px;
+    background-color: #c50b1e;
+  }
+  .about__left-col,
+  .about__right-col {
+    width: auto;
+  }
+  .about__text {
+    padding-right: 10px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .about__text-header {
+    display: none;
+  }
+  .about__link {
+    display: none;
+  }
+  .about__right-col {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .about__img {
+    width: 100%;
+  }
+  .about__stats {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .about__stats p {
+    width: 133px;
+    margin-right: 5px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 19px;
+    }
+  .about__stats span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 30px;
+    line-height: 41px;
+  }
+}
+@media only screen and (min-width : 320px)and (max-width : 639px) {
+  .about__wrapper {
+    display: block;
+    width: auto;
+    padding: 50px 20px 0;
+  }
+  .about__title {
+    display: inline-block;
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: normal;
+  }
+  .about__title:after {
+    content: '';
+    display: block;
+    width: 142px;
+    height: 3px;
+    margin-top: 5px;
+    background-color: #c50b1e;
+  }
+  .about__left-col,
+  .about__right-col {
+    width: auto;
+  }
+  .about__text {
+    padding-right: 10px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .about__text-header {
+    display: none;
+  }
+  .about__link {
+    display: none;
+  }
+  .about__right-col {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .about__img {
+    width: 100%;
+  }
+  .about__stats {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .about__stats p {
+    width: 133px;
+    margin-right: 5px;
+    margin-bottom: 20px;
     text-align: left;
     font-size: 14px;
     line-height: 19px;
