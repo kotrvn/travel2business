@@ -1,12 +1,28 @@
 $(document).ready(function() {
+  function fullPage() {
     $('#fullpage').fullpage({
       menu: '#menu',
-      responsiveWidth: 768,
       anchors: ['offer', 'about', 'advantages', 'reviews', 'contacts'],
       scrollOverflow: true,
       navigation: true,
     });
+  }
 
+  fullPage();
+
+ var initialCheckWidth = $(window).width();
+  if (initialCheckWidth > 959) {
+    fullPage();
+  }
+  $(window).resize(function() {
+    newCheckWidth = $(window).width();
+    if( initialCheckWidth > 960 && newCheckWidth <= 960 ) {
+      $.fn.fullpage.destroy('all');
+    } else if( initialCheckWidth <= 960 && newCheckWidth > 960 ) {
+      fullPage();
+    }
+    initialCheckWidth = newCheckWidth;
+  });
 
     $('#clientSlider').slick({
       infinite: true,
