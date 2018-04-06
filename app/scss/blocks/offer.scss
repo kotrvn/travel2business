@@ -1,6 +1,7 @@
 .offer {
   box-sizing: border-box;
   width: auto;
+  background-image: url(../../img/header__bg.jpg);
   background-repeat: no-repeat; 
   background-position: center;
   background-size: cover;
@@ -60,14 +61,17 @@
 }
 
 .we-can__item svg {
-  fill: #D61C3E;
+  fill: #fff;
 }
 .we-can__item-text {
   max-width: 215px;
   color: #fff;
 }
+.offer-mobile__title {
+    display: none;
+}
 
-@media only screen and (min-width : 960px) and (max-width : 1024px) {
+@media only screen and (min-width : 960px) and (max-width : 1120px) {
   .offer__wrapper {
     width: 1024px;
     height: calc(100vh - 20px);
@@ -80,36 +84,144 @@
   .offer__link {
     margin-left: 60px;
   }
+  .offer-mobile__title {
+    display: none;
+  }
+  .we-can__item svg {
+    fill: #fff;
+  }
 }
 @media only screen and (min-width : 640px) and (max-width : 959px) {
+  .offer {
+    background-image: none;
+    padding: 0;
+    margin: 0;
+  }
   .offer__wrapper {
-    width: auto;
-    padding: 50px 30px 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .offer__top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 320px 20px 250px;
+    margin-bottom: 50px;
+    background-image: url(../../img/header__bg.jpg);
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
   }
   .offer__title {
-    width: auto;
+    width: fit-content;
     font-size: 28px;
     line-height: 36px;
-    margin-bottom: 25px;
-    padding-right: 50px;
+    margin-bottom: 20px;
+    padding-right: 60px;
+  }
+  .offer__bottom {
+    padding: 0 20px;
+  }
+  .offer-mobile__title {
+    display: inline-block;
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: normal;
+  }
+  .offer-mobile__title:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    background-color: #c50b1e;
   }
   .we-can {
-    display: none;
+    margin-top: 20px;
+    color: #000;
+  }
+  .we-can__item {
+    flex-direction: column;
+    width: 50%;
+    color: #000;
+  }
+  .we-can__item svg {
+    fill: #c50b1e;
+    stroke-width: 0;
+  }
+  .we-can__item-text {
+    color: #000;
   }
 }
 @media only screen and (min-width : 320px)and (max-width : 639px) {
+  .offer {
+    background-image: none;
+    padding: 0;
+    margin: 0;
+  }
   .offer__wrapper {
-    width: auto;
-    padding: 50px 20px 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .offer__top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 350px 20px 300px;
+    margin-bottom: 50px;
+    background-image: url(../../img/header__bg.jpg);
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
   }
   .offer__title {
     width: auto;
     font-size: 28px;
     line-height: 36px;
     margin-bottom: 20px;
-    padding-right: 40px;
+    padding-right: 60px;
+  }
+  .offer__bottom {
+    padding: 0 20px;
+  }
+  .offer-mobile__title {
+    display: inline-block;
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: normal;
+  }
+  .offer-mobile__title:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    background-color: #c50b1e;
   }
   .we-can {
-    display: none;
+    margin-top: 20px;
+    color: #000;
+  }
+  .we-can__item {
+    flex-direction: column;
+    width: 50%;
+    color: #000;
+  }
+  .we-can__item svg {
+    fill: #c50b1e;
+    stroke-width: 0;
+  }
+  .we-can__item-text {
+    color: #000;
   }
 }

@@ -8,17 +8,15 @@ $(document).ready(function() {
     });
   }
 
-  fullPage();
-
  var initialCheckWidth = $(window).width();
-  if (initialCheckWidth > 959) {
+  if (initialCheckWidth > 960) {
     fullPage();
   }
   $(window).resize(function() {
     newCheckWidth = $(window).width();
-    if( initialCheckWidth > 960 && newCheckWidth <= 960 ) {
+    if( initialCheckWidth > 959 && newCheckWidth <= 959 ) {
       $.fn.fullpage.destroy('all');
-    } else if( initialCheckWidth <= 960 && newCheckWidth > 960 ) {
+    } else if( initialCheckWidth >= 959 && newCheckWidth > 959 ) {
       fullPage();
     }
     initialCheckWidth = newCheckWidth;
@@ -26,11 +24,18 @@ $(document).ready(function() {
 
     $('#clientSlider').slick({
       infinite: true,
-      slidesToShow: 5,
-      slidesToScroll: 1,
+      mobileFirst: true,
       arrows: false,
-      autoplay: true,
-      autoplaySpeed: 2000
+      slidesToShow: 2,
+      responsive: [
+        {
+          breakpoint: 960,
+          settings: {
+            slidesToShow: 5,
+            slidesToScroll: 1
+          }
+        }
+      ]
     });
 
     $('#reviewSlider').slick({
@@ -58,16 +63,21 @@ $(document).ready(function() {
           $status.text(i + '/' + slick.slideCount);
       });
 
-    $('advantageSlider').slick({
+    $('#advantageSlider').slick({
       mobileFirst: true,
-      infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
-      autoplay: false,
       responsive: [
         {
-          breakpoint: 568,
+          breakpoint: 440,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 959,
           settings: 'unslick'
         }
       ]
@@ -79,4 +89,34 @@ $(document).ready(function() {
       $('.burger').toggleClass('active');
       $('.m-menu').toggleClass('m-menu-show');
     });
+
+    var $window = $(window),
+    lastScrollTop = 0;
+
+    function onScroll (e) {
+        var top = $window.scrollTop();
+        if (lastScrollTop > top) {
+            $('.page-header__wrapper').addClass('active');
+        } else if (lastScrollTop < top) {
+            $('.page-header__wrapper').removeClass('active');
+        }
+        lastScrollTop = top;
+    }
+    $window.on('scroll', onScroll);
+
+    var $window = $(window),
+    lastScrollTop = 0;
+
+    var darkLogo = $('.logo__img--dark');
+            logo = $('.logo__img');
+         menuBtn = $('.burger');
+
+
+    $(window).on('scroll', function(){
+    if($(window).scrollTop() >= $('.offer__bottom').offset().top){
+      darkLogo.toggleClass('active');
+      logo.toggleClass('active');
+      menuBtn.css('background-color', '#000');
+    } 
+  });
 });

@@ -16,13 +16,16 @@
   width: 1280px;
   margin: 0 auto;
   padding: 0 55px;
+  z-index: 5000;
 
 }
 
 .page-header__logo {
+  position: relative;
   display: block;
   width: 170px;
   margin-top: 45px;
+  z-index: 500;
 }
 
 body.fp-viewing-offer .logo__img {
@@ -93,7 +96,7 @@ body.fp-viewing-contacts .page-header {
   display: block;
   margin-top: 40px;
 }
-@media only screen and (min-width : 960px) and (max-width : 1024px) {
+@media only screen and (min-width : 960px) and (max-width : 1120px) {
   .page-header__wrapper {
     width: 1024px;
     margin: 0 auto;
@@ -128,9 +131,24 @@ body.fp-viewing-contacts .page-header {
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
+    transform: translateY(-100%);
+    transition: all .3s;
+  }
+  .page-header__wrapper.active {
+    transform: translateY(0);
   }
   .page-header__logo {
     margin-top: 30px;
+  }
+  .logo__img {
+    display: none;
+  }
+  .logo__img--dark {
+    display: none;
+  }
+  .logo__img--dark.active,
+  .logo__img.active {
+    display: block;
   }
   .page-header__navigation {
     display: none;
