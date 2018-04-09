@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  // Fullpage
   function fullPage() {
     $('#fullpage').fullpage({
       menu: '#menu',
@@ -7,53 +8,73 @@ $(document).ready(function() {
       navigation: true,
     });
   }
-
- var initialCheckWidth = $(window).width();
-  if (initialCheckWidth > 960) {
-    fullPage();
-  }
-  $(window).resize(function() {
-    newCheckWidth = $(window).width();
-    if( initialCheckWidth > 959 && newCheckWidth <= 959 ) {
-      $.fn.fullpage.destroy('all');
-    } else if( initialCheckWidth >= 959 && newCheckWidth > 959 ) {
+  // Активация Fullpage на больших экранах
+  var initialCheckWidth = $(window).width();
+    if (initialCheckWidth > 768) {
       fullPage();
     }
-    initialCheckWidth = newCheckWidth;
+    $(window).resize(function() {
+      newCheckWidth = $(window).width();
+      if( initialCheckWidth > 767 && newCheckWidth <= 767 ) {
+        $.fn.fullpage.destroy('all');
+      } else if( initialCheckWidth >= 767 && newCheckWidth > 767 ) {
+        fullPage();
+      }
+      initialCheckWidth = newCheckWidth;
   });
 
+    // Слайдер с лого клиентов
     $('#clientSlider').slick({
+      centerMode: true,
+      centerPadding: '10px',
       infinite: true,
       mobileFirst: true,
       arrows: false,
       slidesToShow: 2,
+      autoplay: true,
+      autoplaySpeed: 1500,
       responsive: [
         {
-          breakpoint: 960,
+          breakpoint: 767,
           settings: {
-            slidesToShow: 5,
-            slidesToScroll: 1
+            slidesToShow: 4,
+            slidesToScroll: 2
           }
         }
       ]
     });
 
+    // Слайдер с отзывами
     $('#reviewSlider').slick({
+      initialSlide: 1,
+      mobileFirst: true,
       infinite: true,
+      dots: true,
       initialSlide: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
-      autoplay: false,
-      autoplaySpeed: 2000,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      responsive: [
+        {
+          breakpoint: 767,
+          settings: {
+            dots: false
+          }
+        }
+      ]
     });
+
+    // Кнопки слайдера с отзывами
+
     $('#jsSliderPrev').on('click', function() {
       $('#reviewSlider').slick('slickNext');
     });
     $('#jsSliderNext').on('click', function() {
       $('#reviewSlider').slick('slickPrev');
     });
-
+    // Номер слайда с отзывом
       var $status = $('#result');
       var $slickElement = $('#reviewSlider');
 
@@ -63,60 +84,51 @@ $(document).ready(function() {
           $status.text(i + '/' + slick.slideCount);
       });
 
+  // слайдер с преимуществами
+
     $('#advantageSlider').slick({
       mobileFirst: true,
+      dots: true,
+      infinite: false,
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
       responsive: [
         {
-          breakpoint: 440,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 959,
+          breakpoint: 767,
           settings: 'unslick'
         }
       ]
     });
 
-
-
+  // Меню на телефоне
     $('.menu-btn').on('click', function(e) {
       $('.burger').toggleClass('active');
       $('.m-menu').toggleClass('m-menu-show');
     });
 
-    var $window = $(window),
-    lastScrollTop = 0;
 
-    function onScroll (e) {
-        var top = $window.scrollTop();
-        if (lastScrollTop > top) {
-            $('.page-header__wrapper').addClass('active');
-        } else if (lastScrollTop < top) {
-            $('.page-header__wrapper').removeClass('active');
-        }
-        lastScrollTop = top;
-    }
-    $window.on('scroll', onScroll);
+  // Фиксированный хэдэр
 
-    var $window = $(window),
-    lastScrollTop = 0;
-
-    var darkLogo = $('.logo__img--dark');
-            logo = $('.logo__img');
-         menuBtn = $('.burger');
-
-
-    $(window).on('scroll', function(){
-    if($(window).scrollTop() >= $('.offer__bottom').offset().top){
-      darkLogo.toggleClass('active');
-      logo.toggleClass('active');
-      menuBtn.css('background-color', '#000');
-    } 
+    $(window).scroll(function(){
+      if ($(this).scrollTop() > 450) {
+        $('.page-header').addClass('sticked');
+        $("[data-logo='red']").removeClass('active');
+        $("[data-logo='blue']").addClass('active');
+        $('.burger').addClass('burger--dark');
+      } else {
+        $('.page-header').removeClass('sticked'); 
+        $("[data-logo='blue']").removeClass('active');
+        $("[data-logo='red']").addClass('active');
+        $('.burger').removeClass('burger--dark');
+      }
   });
+    if($('.burger + .active')) {
+      $("[data-logo='red']").removeClass('active');
+      $("[data-logo='blue']").addClass('active');
+      } else {
+        $("[data-logo='blue']").removeClass('active');
+        $("[data-logo='red']").addClass('active');
+      }
 });
+

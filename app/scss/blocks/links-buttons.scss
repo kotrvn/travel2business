@@ -1,43 +1,66 @@
 .links-buttons {
-  display: flex;
-  align-items: center;
+  display: none;
 }
-.links-buttons__phone,
-.links-buttons__email {
-  font-size: 16px;
-  line-height: 18px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: normal;
-  text-transform: lowercase;
-}
-.links-buttons__phone {
-  width: 170px;
-  margin-right: 18px;
-}
-body.fp-viewing-about .links-buttons__phone,
-body.fp-viewing-advantages .links-buttons__phone,
-body.fp-viewing-reviews .links-buttons__phone,
-body.fp-viewing-contacts .links-buttons__phone,
-body.fp-viewing-about .links-buttons__email,
-body.fp-viewing-advantages .links-buttons__email,
-body.fp-viewing-reviews .links-buttons__email,
-body.fp-viewing-contacts .links-buttons__email  {
-  color: #000;
-}
-
-@media only screen and (min-width : 960px) and (max-width : 1120px) {
-  .links-buttons__phone {
-    width: 132px;
+@media (min-width: $tablet-width) {
+  .links-buttons {
+    display: flex;
+    align-items: center;
   }
   .links-buttons__phone,
   .links-buttons__email {
     font-size: 14px;
-    line-height: 19px;
-    padding: 8px;
+    line-height: 16px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    text-transform: lowercase;
+  }
+  .links-buttons__phone {
+    width: 130px;
+    margin-right: 0;
+    padding: 5px 8px;
+  }
+  .links-buttons__email {
+    display: none;
+  }
+  body.fp-viewing-about .links-buttons__phone,
+  body.fp-viewing-advantages .links-buttons__phone,
+  body.fp-viewing-reviews .links-buttons__phone,
+  body.fp-viewing-contacts .links-buttons__phone,
+  body.fp-viewing-about .links-buttons__email,
+  body.fp-viewing-advantages .links-buttons__email,
+  body.fp-viewing-reviews .links-buttons__email,
+  body.fp-viewing-contacts .links-buttons__email  {
+    color: #000;
   }
 }
-@media only screen and (min-width : 320px) and (max-width : 960px) {
-  .links-buttons {
-    display: none;
+@media (min-width: $laptop-width) {
+  .links-buttons__phone {
+    width: 130px;
+    margin-right: 15px;
+    padding: 5px 8px;
+  }
+  .links-buttons__email {
+    display: block;
+    padding: 5px 8px;
+  }
+}
+@media (min-width: $desctop-width) {
+  .links-buttons__phone,
+  .links-buttons__email {
+    font-size: 16px;
+    line-height: 19px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    text-transform: lowercase;
+  }
+  .links-buttons__phone {
+    width: 160px;
+    margin-right: 20px;
+    padding: 10px;
+  }
+  .links-buttons__email {
+    display: block;
+    margin-right: 0;
+    padding: 10px;
   }
 }
