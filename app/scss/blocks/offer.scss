@@ -89,6 +89,7 @@
 }
 .we-can__item-text {
   color: #000;
+  font-weight: normal;
 }
 
 @media (min-width: $tablet-width) {
@@ -142,7 +143,6 @@
     display: inline-block;
     margin-bottom: 85px;
     padding: 10px 20px;
-    background-color: #C50B1E;
     font-size: 16px;
     line-height: 18px;
     text-transform: none;
@@ -150,8 +150,14 @@
     transition: all .3s;
   }
   .offer__link:hover {
-    background-color: #d73a4a;
+    border-color: #B01122;
+    background-color: #B01122;
   }
+  .offer__link:active {
+    background-color: #9C0717;
+    border-color: #9C0717;
+  }
+
 
   .we-can {
     display: flex;
@@ -169,9 +175,11 @@
   }
 
   .we-can__item svg {
+    flex-basis: 60px;
     align-self: flex-start;
     width: 45px;
     height: 45px;
+    margin-right: 20px;
     margin-bottom: 10px;
     fill: #fff;
     stroke-opacity: 1;
@@ -180,6 +188,7 @@
   .we-can__item-text {
     color: #fff;
   }
+
 }
 @media (min-width: $laptop-width) {
   .offer__wrapper {

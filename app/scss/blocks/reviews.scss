@@ -106,7 +106,7 @@
     width: 768px;
     margin: 0 auto;
     padding-left: 100px;
-    padding-top: 100px;
+    padding-top: 80px;
     padding-right: 40px;
   }
   .reviews__title {
@@ -125,7 +125,8 @@
     padding: 0;
     background: #fff;
     border-radius: 0;
-    margin: 0;
+    margin: 0 auto;
+
   }
   .review__slide {
     display: flex!important;
@@ -137,14 +138,15 @@
   .review__text {
     display: block;
     width: 485px;
+    margin-left: 50px;
     font-size: 16px;
     line-height: 22px;
     margin-bottom: 30px;
     color: #000;
   }
   .review__author {
-    width: 180px;
-    margin-right: 20px;
+    width: fit-content;
+    
   }
   .review__name {
     display: block;
@@ -172,26 +174,26 @@
     right: 20px;
     background: none;
     border: none;
-    width: 20px;
-    height: 40px;
+    width: 14px;
+    height: 30px;
     
     &--prev {
-      margin-right: 25px;
-      fill: #565656;
+      margin-right: 10px;
+      fill: #fff;
     }
     &--next {
       margin-left: 0;
-      fill: #565656;
+      fill: #fff;
     }
   }
   .review__toggle-numbers {
-    font-size: 28px;
+    font-size: 14px;
     line-height: 30px;
-    margin-top: 5px;
-    margin-left: 30px;
+    margin-top: 2px;
+    margin-left: 5px;
     font-weight: bold;
     color: #565656;
-    margin-right: 20px;
+    margin-right: 5px;
   }
 }
 @media (min-width: $laptop-width) { 
@@ -202,7 +204,7 @@
     width: 1024px;
     margin: 0 auto;
     padding-left: 100px;
-    padding-top: 100px;
+    padding-top: 80px;
     padding-right: 40px;
   }
   .review__text {
@@ -221,11 +223,22 @@
     width: 1280px;
     margin: 0 auto;
     padding-left: 155px;
-    padding-top: 120px;
+    padding-top: 80px;
     padding-right: 55px;
   }
+  .reviews__slider {
+    margin-left: 100px;
+  }
+  .review__text {
+    width: 580px;
+    padding-right: 20px;
+  }
   .review__toggle {
-    margin-right: 125px;
+    width: 880px;
+    margin-top: -33px;
+  }
+  .clients__list {
+    margin-top: 20px;
   }
 }
 

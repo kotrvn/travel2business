@@ -18,7 +18,7 @@
   content: '';
   display: block;
   width: 100%;
-  height: 3px;
+  height: 2px;
   margin-top: 5px;
   background-color: #c50b1e;
 }
@@ -97,9 +97,9 @@
   .about__title {
     display: block;
     width: 800px;
-    margin-bottom: 30px;
     font-size: 28px;
     line-height: 38px;
+    margin-bottom: 20px;
     font-weight: normal;
     text-align: left;
   }
@@ -108,7 +108,8 @@
     display: block;
     vertical-align: middle;
     width: 80px;
-    height: 3px;
+    height: 2px;
+    margin-top: 20px;
     background-color: #c50b1e;
   }
   .about__text {
@@ -138,7 +139,7 @@
   }
 
   .about__link {
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 30px;
     display: inline-block;
     margin-bottom: 85px;
@@ -148,6 +149,14 @@
     line-height: 18px;
     text-transform: none;
     font-weight: normal;
+  }
+  .about__link:hover {
+    border-color: #B01122;
+    background-color: #B01122;
+  }
+  .about__link:active {
+    background-color: #9C0717;
+    border-color: #9C0717;
   }
 
   .about__img {
@@ -192,9 +201,7 @@
   }
   .about__right-col {
     width: 50%;
-  }
-  .about__title {
-    margin-bottom: 40px;
+    padding-left: 40px;
   }
 
   .about__text {
