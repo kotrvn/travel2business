@@ -174,16 +174,17 @@
     right: 20px;
     background: none;
     border: none;
-    width: 14px;
+    width: 30px;
     height: 30px;
     
     &--prev {
-      margin-right: 10px;
+      margin-right: 0px;
       fill: #fff;
     }
     &--next {
       margin-left: 0;
       fill: #fff;
+      padding-right: 30px;
     }
   }
   .review__toggle-numbers {

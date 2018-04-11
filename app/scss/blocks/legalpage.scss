@@ -1,0 +1,76 @@
+.legalpage .page-header a {
+  color: #000;
+}
+.legalpage .links-buttons a:hover {
+  color: #fff;
+}
+.legalpage .logo__img--dark {
+  display: none;
+}
+.legalpage .logo__img {
+  display: block;
+}
+
+.legalpage .page-footer {
+  background-color: #fff;
+}
+.legalpage .page-footer {
+  width: auto;
+}
+.legalpage .page-footer__wrapper {
+  min-width: 320px;
+  padding: 0 20px;
+}
+.legalpage .page-footer__item {
+  display: flex;
+  font-size: 16px;
+  line-height: 22px;
+}
+.legalpage .page-footer__text {
+  color: #000;
+}
+.legalpage .page-footer__phone,
+.legalpage .page-footer__email {
+  color: #000;
+}
+@media (min-width: $tablet-width) {
+  .legalpage .page-footer {
+    width: auto;
+  }
+  .legalpage .page-footer__wrapper {
+    width: 768px;
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-top: 80px;
+    padding-right: 40px;
+  }
+  .legalpage .page-footer__title {
+    height: 65px;
+    font-family: OpenSans;
+    font-size: 48px;
+  }
+}
+@media (min-width: $laptop-width) {
+  .legalpage .page-footer {
+    width: auto;
+  }
+  .legalpage .page-footer__wrapper {
+    width: 1024px;
+    margin: 0 auto;
+    padding-left: 100px;
+    padding-top: 80px;
+    padding-right: 40px;
+  }
+}
+@media (min-width: $desctop-width) {
+  .legalpage .page-footer {
+    width: auto;
+  }
+  .legalpage .page-footer__wrapper {
+    width: 1280px;
+    margin: 0 auto;
+    padding-left: 155px;
+    padding-top: 80px;
+    padding-right: 40px;
+  }
+}

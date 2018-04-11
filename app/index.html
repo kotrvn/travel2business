@@ -46,7 +46,7 @@
           <div class="m-menu">
             <ul class="m-menu__list">
               <li data-menuanchor="about" class="m-menu__item"><a href="#about" class="m-menu__link">О компании</a></li>
-              <li data-menuanchor="about" class="m-menu__item"><a href="#about" class="m-menu__link">Услуги</a></li>
+              <li data-menuanchor="about" class="m-menu__item"><a href="#offerBottom" class="m-menu__link">Услуги</a></li>
               <li data-menuanchor="advantages" class="m-menu__item"><a href="#advantages" class="m-menu__link">Почему мы</a></li>
               <li data-menuanchor="reviews" class="m-menu__item"><a href="#reviews" class="m-menu__link">Отзывы</a></li>
               <li data-menuanchor="contacts" class="m-menu__item"><a href="#contacts" class="m-menu__link">Контакты</a></li>
@@ -72,7 +72,7 @@
             <h2 class="offer__title">Доверьте организацию деловых поездок профессионалам!</h2>
             <a href="#advantages" class="offer__link button">Узнать больше</a>
           </div>
-          <div class="offer__bottom">
+          <div id="offerBottom" class="offer__bottom">
             <h2 class="offer-mobile__title">Наши услуги</h2>
             <div class="offer__icons we-can">
               <div class="we-can__item">
@@ -154,7 +154,7 @@
             <p class="advantages__teaser">С нами удобно и надежно. Индивидуальный
              подход<br>к каждому клиенту и готовность помочь в любую минуту.</p>
              <p class="advantages__teaser-mobile">Наши преимущества</p>
-              <a href="#form" class="advantages__button button">Отправить заявку</a>
+              <a href="#contacts" class="advantages__button button">Отправить заявку</a>
           </div>
           <div id="advantageSlider" class="advantages__list mobile-slider">
             <div class="mobile-slider__wrap">
@@ -323,45 +323,45 @@
             <div class="contacts__social social">
               <ul class="social__list">
                 <li class="social__item">
-                  <a href="www.vk.com/travel2business" target="_blank" class="social__link social__link--vk">
+                  <a href="https://vk.com/travel2business" target="_blank" class="social__link social__link--vk">
                   <svg width="35" height="20">
                     <use xlink:href="img/svg-sprite.svg#icon-vk"></use>
                   </svg>
                 </a></li>
                 <li class="social__item">
-                  <a href="www.instagram.com/travel2business" target="_blank" class="social__link social__link--instagram">
+                  <a href="https://instagram.com/travel2business" target="_blank" class="social__link social__link--instagram">
                   <svg width="22" height="22">
                     <use xlink:href="img/svg-sprite.svg#icon-instagram"></use>
                   </svg>
                 </a></li>
-                <li class="social__item"><a href="#" class="social__link social__link--facebook">
+                <li class="social__item"><a href="https://facebook.com" class="social__link social__link--facebook">
                   <svg width="13" height="25">
                     <use xlink:href="img/svg-sprite.svg#icon-facebook"></use>
                   </svg>
                 </a></li>
               </ul>
               <div class="social__private">
-                <a href="#">Юридическая информация</a>
+                <a href="legal.html">Юридическая информация</a>
               </div>
             </div>
           </div>
           <div class="contacts__form form">
-            <form id="call-back" class="form__inputs" action="#" method="post">
+            <form id="form" class="form__inputs" action="#" method="post">
               <h2 class="form__title">Оставить заявку</h2>
               <h2 class="form__title-mobile">Оставить заявку</h2>
               <label class="form__lable" for="name">
-                <input class="form__input" type="text" id="name" placeholder="Ваше имя">
+                <input class="form__input" type="text" name="inputName" id="name" placeholder="Ваше имя" required="Cоси">
               </label>
               <label class="form__lable" for="phone">
-                <input class="form__input" type="tel" id="phone" placeholder="Ваш телефон">
+                <input class="form__input" name="inputPhone" type="text" id="phone" placeholder="Ваш телефон">
               </label>
               <label class="form__lable" for="email">
-                <input class="form__input" type="tel" id="email" placeholder="Ваша почта">
+                <input class="form__input" name="inputEmail" type="email" id="email" placeholder="Ваша почта">
               </label>
               <label class="form__lable" for="comment">Сообщение
-                <textarea class="form__textarea" name="call-back" id="comment" rows="2"></textarea>
+                <textarea class="form__textarea" name="inputTextarea" id="comment" rows="2"></textarea>
               </label>
-              <input class="form__checkbox" id="agreement" type="checkbox">
+              <input class="form__checkbox" name="inputCheckbox" id="agreement" type="checkbox">
               <label class="form__check-lable" for="agreement">Принимаю <a class="form__link" href="#">политику конфиденциальности</a></label>
               <button form="call-back" type="submit" class="form__button button">Отправить заявку</button>
             </form>
@@ -373,7 +373,19 @@
       </section>
     </div>
   </main>
+  <div id="popup" class="popup active">
+    <div class="popup__overlay popup__overlay--show"></div>
+    <div class="popup__item active">
+      <h2>Cпасибо!</h2>
+      <p>Ваша заявка успешно отправлена.</p>
+      <p>С вами свяжутся в ближайшее время.</p>
+      <button class="popup__btn" onclick="closePopup()"><span>Закрыть</span></button>
+    </div>
+  </div>
   <script src="libs/jquery/dist/jquery.min.js"></script>
+  <script src="libs/svgxuse/svgxuse.min.js"></script>
+  <script src="libs/validate/jquery.validate.min.js"></script>
+  <script src="libs/mask/jquery.maskedinput.min.js"></script>
   <script src="libs/fullpage/jquery.fullpage.js"></script>
   <script src="libs/slick/slick.min.js"></script>
   <script src="js/main.js"></script>

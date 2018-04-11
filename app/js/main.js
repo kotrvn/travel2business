@@ -55,7 +55,7 @@ $(document).ready(function() {
       slidesToScroll: 1,
       arrows: false,
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 5000,
       responsive: [
         {
           breakpoint: 767,
@@ -111,7 +111,7 @@ $(document).ready(function() {
   // Фиксированный хэдэр
 
     $(window).scroll(function(){
-      if ($(this).scrollTop() > 450) {
+      if ($(this).scrollTop() > 480) {
         $('.page-header').addClass('sticked');
         $("[data-logo='red']").removeClass('active');
         $("[data-logo='blue']").addClass('active');
@@ -124,12 +124,9 @@ $(document).ready(function() {
       }
   });
   function menuLogo() {
-     if($('.burger + .active')) {
-      $("[data-logo='blue']").removeClass('active');
-      $("[data-logo='red']").addClass('active');
-      } else {
-        $("[data-logo='red']").removeClass('active');
-        $("[data-logo='blue']").addClass('active');
+     if($('.menu-btn .burger').hasClass('active')) {
+      $("[data-logo='blue']").addClass('active');
+      $("[data-logo='red']").removeClass('active');
       }
   };
 
@@ -198,5 +195,52 @@ $(document).ready(function() {
       scrollPrev = scrolled;
     } 
   });
+  // Валидация формы 
+  $('#form').validate({
+          rules: {
+            inputName: {
+              required: true,
+              minlength: 2
+            },
+            inputPhone: {
+              required: true,
+            },
+            inputEmail: {
+              required: true,
+              email: true
+            },
+            inputTextarea: {
+              required: true
+            },
+            inputCheckbox: {
+              required: true
+            }
+          },
+          messages: {
+            inputName: {
+              required: 'Введите ваше имя',
+              minlength: 'Слишком короткое имя'
+            },
+            inputPhone: {
+              required: 'Введите ваш телефон'
+            },
+            inputEmail: {
+              required: 'Введите ваш еmail',
+              email: 'Введите корректный email'
+            },
+            inputTextarea: {
+              required: 'Введите ваше сообщение'
+            },
+            inputCheckbox: {
+              required: 'Примите пользовательское соглашение'
+            }
+          },
+          submitHandler: function() {
+            $('#form').submit();
+          }
+
+  });
+  // Вот вам маска для телефона
+  $("#phone").mask("+7(999) 999-9999");
 });
 

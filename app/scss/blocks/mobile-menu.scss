@@ -21,6 +21,11 @@
 .menu-btn .burger--dark {
   background-color: #000;
 }
+.menu-btn .burger--dark:before,
+.menu-btn .burger--dark:after {
+  background: #000;
+}
+
 .menu-btn .burger:before, 
 .menu-btn .burger:after {
   position: absolute;

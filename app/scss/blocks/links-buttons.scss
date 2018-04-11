@@ -31,6 +31,9 @@
   body.fp-viewing-reviews .links-buttons__email,
   body.fp-viewing-contacts .links-buttons__email  {
     color: #000;
+    &:hover {
+      color: #fff;
+    }
   }
 }
 @media (min-width: $laptop-width) {
