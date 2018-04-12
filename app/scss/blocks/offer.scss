@@ -76,8 +76,9 @@
   padding-right: 5%;
 }
 .we-can__item svg {
-  width: 60px;
-  height: 50px;
+  flex-basis: 0;
+  width: 40px;
+  height: 40px;
   fill: #c50b1e;
   stroke-width: 1;
   stroke-opacity: 0;
@@ -158,6 +159,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-beetween;
+
   }
 
   .we-can__item {

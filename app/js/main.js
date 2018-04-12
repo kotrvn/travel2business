@@ -4,7 +4,7 @@ $(document).ready(function() {
     $('#fullpage').fullpage({
       menu: '#menu',
       anchors: ['offer', 'about', 'advantages', 'reviews', 'contacts'],
-      scrollOverflow: true,
+      scrollOverflow: false,
       navigation: true,
     });
   }
@@ -23,6 +23,7 @@ $(document).ready(function() {
       initialCheckWidth = newCheckWidth;
   });
 
+
     // Слайдер с лого клиентов
     $('#clientSlider').slick({
       centerMode: true,
@@ -38,7 +39,8 @@ $(document).ready(function() {
           breakpoint: 767,
           settings: {
             slidesToShow: 5,
-            slidesToScroll: 2
+            slidesToScroll: 2,
+            draggable: false,
           }
         }
       ]
@@ -60,6 +62,7 @@ $(document).ready(function() {
         {
           breakpoint: 767,
           settings: {
+            draggable: false,
             dots: false
           }
         }
@@ -123,15 +126,63 @@ $(document).ready(function() {
         $('.burger').removeClass('burger--dark');
       }
   });
-  function menuLogo() {
-     if($('.menu-btn .burger').hasClass('active')) {
-      $("[data-logo='blue']").addClass('active');
-      $("[data-logo='red']").removeClass('active');
-      }
-  };
+  // function menuLogo() {
+  //    if($('.menu-btn .burger').hasClass('active')) {
+  //     $("[data-logo='blue']").addClass('active');
+  //     $("[data-logo='red']").removeClass('active');
+  //     }
+  // };
 
-  menuLogo();
+  // menuLogo();
   
+  $('.form__button').on('click', function(){
+    $('#popup').toggleClass('active');
+    $('.popup__overlay').toggleClass('popup__overlay--show');
+    $('.popup__item').toggleClass('active');
+  });
+
+  $('.popup__close').on('click', function(){
+    $('#popup').toggleClass('active');
+    $('.popup__overlay').toggleClass('popup__overlay--show');
+    $('.popup__item').toggleClass('active');
+  });
+
+
+
+  if ($(window).width() < 768) {
+    $('section').removeAttr('id', 'section0');
+    $('section').removeAttr('id', 'section1');
+    $('section').removeAttr('id', 'section2');
+    $('section').removeAttr('id', 'section3');
+    $('section').removeAttr('id', 'section4');
+  }
+  else {
+    return;
+  }
+
+  if ($(window).width() < 768) {
+    $('section:first-child').attr('id', 'offer');
+    $('section:nth-child(2)').attr('id', 'about');
+    $('section:nth-child(3)').attr('id', 'advantages');
+    $('section:nth-child(4)').attr('id', 'reviews');
+    $('section:last-child').attr('id', 'contacts');
+    }
+    else {
+      return;
+  }
+
+  $('.m-menu__link').on('click', function() {
+     $('.burger').removeClass('active');
+     $('.m-menu').removeClass('m-menu-show');
+  });
+
+
+  if ($('.m-menu').hasClass('m-menu-show')) {
+    $('.logo__img--dark').removeClass('active');
+    $('.logo__img').addClass('active');
+  } else {
+    return;
+  }
   
   var header = $(".page-header"); // Меню
   var scrollPrev = 0 // Предыдущее значение скролла
@@ -236,7 +287,7 @@ $(document).ready(function() {
             }
           },
           submitHandler: function() {
-            $('#form').submit();
+            $('')
           }
 
   });

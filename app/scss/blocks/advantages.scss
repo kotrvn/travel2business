@@ -44,6 +44,7 @@
   fill: #c50b1e;
 }
 .mobile-slider__wrap {
+  outline: none;
   width: 100%;
 }
 .advantages__text {
@@ -201,7 +202,7 @@
     width: 1280px;
     margin: 0 auto;
     padding-left: 155px;
-    padding-top: 80px;
+    padding-top: 100px;
     padding-right: 55px;
   }
   .advantages__topline {

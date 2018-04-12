@@ -27,36 +27,36 @@
   <header id="header" class="page-header">
       <div class="page-header__wrapper active">
         <h1 class="visually-hidden">Travel2Buissnes - Регион сервиc</h1>
-        <a href="#offer" class="page-header__logo logo">
+        <a href="#offer" data-menuanchor="offer" class="page-header__logo logo">
           <img class="logo__img" data-logo="blue" src="img/logo.svg" alt="Логотип компании - Travel2Buissnes">
           <img class="logo__img--dark active" data-logo="red" src="img/logo-dark.svg" alt="Темный логотип компании - Travel2Buissnes">
         </a>
         <nav class="page-header__navigation nav">
           <ul class="nav__list" id="menu">
-            <li data-menuanchor="about" class="nav__item"><a href="#about" class="nav__link">О компании</a></li>
-            <li data-menuanchor="advantages" class="nav__item"><a href="#advantages" class="nav__link">Почему мы</a></li>
-            <li data-menuanchor="reviews" class="nav__item"><a href="#reviews" class="nav__link">Отзывы</a></li>
-            <li data-menuanchor="contacts" class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
+            <li class="nav__item"><a href="#about" data-menuanchor="about" class="nav__link">О компании</a></li>
+            <li class="nav__item"><a href="#advantages" data-menuanchor="advantages" class="nav__link">Почему мы</a></li>
+            <li class="nav__item"><a href="#reviews" data-menuanchor="reviews" class="nav__link">Отзывы</a></li>
+            <li class="nav__item"><a href="#contacts" data-menuanchor="contacts" class="nav__link">Контакты</a></li>
           </ul>
         </nav>
         <div class="mobile-menu js-mobile-menu">
           <button class="menu-btn">
             <span class="burger"></span>
           </button>
-          <div class="m-menu">
+          <div id="mobileMenu" class="m-menu">
             <ul class="m-menu__list">
-              <li data-menuanchor="about" class="m-menu__item"><a href="#about" class="m-menu__link">О компании</a></li>
-              <li data-menuanchor="about" class="m-menu__item"><a href="#offerBottom" class="m-menu__link">Услуги</a></li>
-              <li data-menuanchor="advantages" class="m-menu__item"><a href="#advantages" class="m-menu__link">Почему мы</a></li>
-              <li data-menuanchor="reviews" class="m-menu__item"><a href="#reviews" class="m-menu__link">Отзывы</a></li>
-              <li data-menuanchor="contacts" class="m-menu__item"><a href="#contacts" class="m-menu__link">Контакты</a></li>
+              <li class="m-menu__item"><a href="#about" data-menuanchor="about" class="m-menu__link">О компании</a></li>
+              <li class="m-menu__item"><a href="#offerBottom" data-menuanchor="offerBottom" class="m-menu__link">Услуги</a></li>
+              <li class="m-menu__item"><a href="#advantages" data-menuanchor="advantages" class="m-menu__link">Почему мы</a></li>
+              <li class="m-menu__item"><a href="#reviews" data-menuanchor="reviews" class="m-menu__link">Отзывы</a></li>
+              <li class="m-menu__item"><a href="#contacts" data-menuanchor="contacts" class="m-menu__link">Контакты</a></li>
             </ul>
             <a href="tel:+7(812)6221571" class="m-menu__phone">+7 812 622 15 71</a>
             <a href="mailto:info@travel2business.ru" class="m-menu__email">info@travel2business.ru</a>
           </div>
         </div>
         <div class="page-header__links links-buttons">
-          <a href="#form" class="links-buttons__phone button">+7 812 622 15 71</a>
+          <a href="tel:+7(812)6221571" class="links-buttons__phone button">+7 812 622 15 71</a>
           <a href="mailto:info@travel2business.ru" class="links-buttons__email button">info@travel2business.ru</a>
         </div>
       </div>
@@ -66,7 +66,7 @@
       <ul></ul>
     </nav>
     <div id="fullpage" class="fullpage-wrapper">
-      <section id="offer" class="section offer">
+      <section id="offer section0" data-anchor="offer" class="section offer">
         <div class="offer__wrapper">
           <div class="offer__top">
             <h2 class="offer__title">Доверьте организацию деловых поездок профессионалам!</h2>
@@ -76,37 +76,37 @@
             <h2 class="offer-mobile__title">Наши услуги</h2>
             <div class="offer__icons we-can">
               <div class="we-can__item">
-                <svg width="45" height="45" class="we-can__item-icon">
+                <svg width="35" height="35" class="we-can__item-icon">
                   <use xlink:href="img/svg-sprite.svg#icon-hotel"></use>
                 <svg>
                 <p class="we-can__item-text">Размещение в гостиницах по России и за рубежом</p>
               </div>
               <div class="we-can__item">
-                <svg width="45" height="45" class="we-can__item-icon">
+                <svg width="35" height="35" class="we-can__item-icon">
                   <use xlink:href="img/svg-sprite.svg#icon-plane"></use>
                 <svg>
                 <p class="we-can__item-text">Авиабилеты<br>и железнодорожные билеты</p>
               </div>
               <div class="we-can__item">
-                <svg width="45" height="45" class="we-can__item-icon">
+                <svg width="35" height="35" class="we-can__item-icon">
                   <use xlink:href="img/svg-sprite.svg#icon-car"></use>
                 <svg>
                 <p class="we-can__item-text">Транспортное<br> обслуживание</p>
               </div>
               <div class="we-can__item">
-                <svg width="45" height="45" class="we-can__item-icon">
+                <svg width="35" height="35" class="we-can__item-icon">
                   <use xlink:href="img/svg-sprite.svg#icon-case"></use>
                 <svg>
                 <p class="we-can__item-text">Организация деловых мероприятий (MICE)</p>
               </div>
               <div class="we-can__item">
-                <svg width="45" height="45" class="we-can__item-icon">
+                <svg width="35" height="35" class="we-can__item-icon">
                   <use xlink:href="img/svg-sprite.svg#icon-museum"></use>
                 <svg>
                 <p class="we-can__item-text">Культурно-развлекательные<br> программы</p>
               </div>
               <div class="we-can__item">
-                <svg width="45" height="45" class="we-can__item-icon">
+                <svg width="35" height="35" class="we-can__item-icon">
                   <use xlink:href="img/svg-sprite.svg#icon-corp"></use>
                 <svg>
                 <p class="we-can__item-text">Корпоративные обучающие программы </p>
@@ -115,7 +115,7 @@
           </div>
         </div>
       </section>
-      <section id="section1 about" class="section about">
+      <section id="about section1" data-anchor="about" class="section about">
         <div class="about__wrapper">
           <h2 class="about__title">О компании</h2>
           <div class="about__left-col">
@@ -138,7 +138,7 @@
           </div>
           <div class="about__right-col">
             <div class="about__img">
-              <img src="img/company__img.png">
+              <img src="img/company__img.png" alt="foto">
             </div>
             <div class="about__stats">
               <p><span>12+</span>лет успешной работы</p>
@@ -148,7 +148,7 @@
           </div>
         </div>
       </section>
-      <section id="section2 advantages" class="section advantages">
+      <section id="advantages section2" data-anchor="advantages" class="section advantages">
         <div class="advantages__wrapper">
           <div class="advantages__topline">
             <p class="advantages__teaser">С нами удобно и надежно. Индивидуальный
@@ -185,7 +185,7 @@
                 с одним поставщиком услуг по всем организационным вопросам.</p>
               </div>
               <div class="advantages__item">
-                <svg width="50" height="50" class="advantages__img">
+                <svg width="50" height="50" stroke="#fff" class="advantages__img">
                   <use xlink:href="img/svg-sprite.svg#icon-noun"></use>
                 </svg>
                 <h3 class="advantages__title">Оптимизация затрат</h3>
@@ -214,7 +214,7 @@
           </div>
         </div>
       </section>
-      <section id="section3 reviews" class="section reviews">
+      <section id="reviews section3" data-anchor="reviews" class="section reviews">
         <div class="reviews__wrapper">
           <h2 class="reviews__title">Клиенты об успешном опыте работы с нами</h2>
           <p class="reviews__title-mobile">Отзывы</p>
@@ -243,7 +243,7 @@
             <div class="review__slide">
               <div class="review__author">
                 <div class="review__img">
-                  <img src="img/2.jpg" alt="#" width="70" height="70">
+                  <img src="img/woman2.jpg" alt="#" width="70" height="70">
                 </div>
                 <div class="review__name name">
                   <span class="name__item">Ирина Владимировна</span>
@@ -259,7 +259,7 @@
             <div class="review__slide">
               <div class="review__author">
                 <div class="review__img">
-                  <img src="img/2.jpg" alt="#" width="70" height="70">
+                  <img src="img/woman1.jpg" alt="#" width="70" height="70">
                 </div>
                 <div class="review__name name">
                   <span class="name__item">Светлана</span>
@@ -292,28 +292,28 @@
           <div class="reviews__clients clients">
             <ul id="clientSlider" class="clients__list">
               <li class="clients__item">
-                <img src="img/clients/gis.png" alt="gazprom" width="126" height="60">
+                <img src="img/clients/cpr.jpg" alt="gazprom" width="66" height="56">
               </li>
               <li class="clients__item">
-                <img src="img/clients/gis.png" alt="lukoil" width="126" height="60">
+                <img src="img/clients/gazprom.jpg" alt="lukoil" width="120" height="56">
               </li>
               <li class="clients__item">
-                <img src="img/clients/gis.png" alt="gis" width="126" height="60">
+                <img src="img/clients/gis.jpg" alt="gis" width="123" height="56">
               </li>
               <li class="clients__item">
-                <img src="img/clients/gis.png" alt="nmlk" width="126" height="60">
+                <img src="img/clients/lukoil.jpg" alt="nmlk" width="247" height="56">
               </li>
               <li class="clients__item">
-                <img src="img/clients/gis.png" alt="purneftegaz" width="126" height="60">
+                <img src="img/clients/nmlk.jpg" alt="purneftegaz" width="122" height="56">
               </li>
               <li class="clients__item">
-                <img src="img/clients/gis.png" alt="cpr" width="126" height="60">
+                <img src="img/clients/purneftegaz.jpg" alt="cpr" width="166" height="56">
               </li>
             </ul>
           </div>
         </div>
       </section>
-      <section id="section4 contacts" class="section contacts">
+      <section id="contacts section4" data-anchor="contacts" class="section contacts">
         <div class="contacts__wrapper">
           <div class="contacts__item">
             <h2 class="contacts__title">Контакты</h2>
@@ -350,7 +350,7 @@
               <h2 class="form__title">Оставить заявку</h2>
               <h2 class="form__title-mobile">Оставить заявку</h2>
               <label class="form__lable" for="name">
-                <input class="form__input" type="text" name="inputName" id="name" placeholder="Ваше имя" required="Cоси">
+                <input class="form__input" type="text" name="inputName" id="name" placeholder="Ваше имя">
               </label>
               <label class="form__lable" for="phone">
                 <input class="form__input" name="inputPhone" type="text" id="phone" placeholder="Ваш телефон">
@@ -363,7 +363,7 @@
               </label>
               <input class="form__checkbox" name="inputCheckbox" id="agreement" type="checkbox">
               <label class="form__check-lable" for="agreement">Принимаю <a class="form__link" href="#">политику конфиденциальности</a></label>
-              <button form="call-back" type="submit" class="form__button button">Отправить заявку</button>
+              <button type="submit" class="form__button button">Отправить заявку</button>
             </form>
           </div>
           <div class="contacts__map">
@@ -373,13 +373,15 @@
       </section>
     </div>
   </main>
-  <div id="popup" class="popup active">
-    <div class="popup__overlay popup__overlay--show"></div>
-    <div class="popup__item active">
+  <div id="popup" class="popup">
+    <div class="popup__overlay"></div>
+    <div class="popup__item">
       <h2>Cпасибо!</h2>
       <p>Ваша заявка успешно отправлена.</p>
       <p>С вами свяжутся в ближайшее время.</p>
-      <button class="popup__btn" onclick="closePopup()"><span>Закрыть</span></button>
+      <div class="popup__close">
+      <button class="popup__btn"><span></span></button>
+      </div>
     </div>
   </div>
   <script src="libs/jquery/dist/jquery.min.js"></script>

@@ -99,55 +99,55 @@
     display: none;
   }
 
-  body.fp-viewing-about .page-header,
-  body.fp-viewing-reviews .page-header, {
-    background-color: #fff;
-    animation: bgfill 1s ease;
-  }
+  // body.fp-viewing-about .page-header,
+  // body.fp-viewing-reviews .page-header, {
+  //   background-color: #fff;
+  //   animation: bgfill 1s ease;
+  // }
 
-  body.fp-viewing-advantages .page-header,
-  body.fp-viewing-contacts .page-header {
-    background-color: #f9f9f9;
-    animation: bgfill 1s ease;
-  }
-  body.fp-viewing-contacts .page-header {
-    background-color: transparent;
-    animation: bgfillback .5s ease;
-  }
-  @keyframes bgfill {
-    0% {
-      background-color: transparent;
-    }
-    50% {
-      background-color: transparent;
-    }
-    60% {
-      background-color: transparent;
-    }
-    70% {
-      background-color: transparent;
-    }
-    80% {
-      background-color: transparent;
-    }
-    90% {
-      background-color: #fff;
-    }
-    100% {
-      background-color: transparent;
-    }
-  }
-  @keyframes bgfillback {
-    0% {
-      background-color: #fff;
-    }
-    50% {
-      background-color: #fff;
-    }
-    100% {
-      background-color: transparent;
-    }
-  }
+  // body.fp-viewing-advantages .page-header,
+  // body.fp-viewing-contacts .page-header {
+  //   background-color: #f9f9f9;
+  //   animation: bgfill 1s ease;
+  // }
+  // body.fp-viewing-contacts .page-header {
+  //   background-color: transparent;
+  //   animation: bgfillback .5s ease;
+  // }
+  // @keyframes bgfill {
+  //   0% {
+  //     background-color: transparent;
+  //   }
+  //   50% {
+  //     background-color: transparent;
+  //   }
+  //   60% {
+  //     background-color: transparent;
+  //   }
+  //   70% {
+  //     background-color: transparent;
+  //   }
+  //   80% {
+  //     background-color: transparent;
+  //   }
+  //   90% {
+  //     background-color: #fff;
+  //   }
+  //   100% {
+  //     background-color: transparent;
+  //   }
+  // }
+  // @keyframes bgfillback {
+  //   0% {
+  //     background-color: #fff;
+  //   }
+  //   50% {
+  //     background-color: #fff;
+  //   }
+  //   100% {
+  //     background-color: transparent;
+  //   }
+  // }
   .page-header__navigation {
     display: block;
     margin-left: auto;
