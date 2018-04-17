@@ -33,10 +33,10 @@
         </a>
         <nav class="page-header__navigation nav">
           <ul class="nav__list" id="menu">
-            <li class="nav__item"><a href="#about" data-menuanchor="about" class="nav__link">О компании</a></li>
-            <li class="nav__item"><a href="#advantages" data-menuanchor="advantages" class="nav__link">Почему мы</a></li>
-            <li class="nav__item"><a href="#reviews" data-menuanchor="reviews" class="nav__link">Отзывы</a></li>
-            <li class="nav__item"><a href="#contacts" data-menuanchor="contacts" class="nav__link">Контакты</a></li>
+            <li class="nav__item" data-menuanchor="about"><a href="#about" class="nav__link">О компании</a></li>
+            <li class="nav__item" data-menuanchor="advantages" ><a href="#advantages" class="nav__link">Почему мы</a></li>
+            <li class="nav__item" data-menuanchor="reviews"><a href="#reviews" class="nav__link">Отзывы</a></li>
+            <li class="nav__item" data-menuanchor="contacts"><a href="#contacts" class="nav__link">Контакты</a></li>
           </ul>
         </nav>
         <div class="mobile-menu js-mobile-menu">
@@ -45,11 +45,11 @@
           </button>
           <div id="mobileMenu" class="m-menu">
             <ul class="m-menu__list">
-              <li class="m-menu__item"><a href="#about" data-menuanchor="about" class="m-menu__link">О компании</a></li>
-              <li class="m-menu__item"><a href="#offerBottom" data-menuanchor="offerBottom" class="m-menu__link">Услуги</a></li>
-              <li class="m-menu__item"><a href="#advantages" data-menuanchor="advantages" class="m-menu__link">Почему мы</a></li>
-              <li class="m-menu__item"><a href="#reviews" data-menuanchor="reviews" class="m-menu__link">Отзывы</a></li>
-              <li class="m-menu__item"><a href="#contacts" data-menuanchor="contacts" class="m-menu__link">Контакты</a></li>
+              <li class="m-menu__item" data-menuanchor="about"><a href="#about" class="m-menu__link">О компании</a></li>
+              <li class="m-menu__item" data-menuanchor="offerBottom"><a href="#offerBottom" class="m-menu__link">Услуги</a></li>
+              <li class="m-menu__item" data-menuanchor="advantages"><a href="#advantages" class="m-menu__link">Почему мы</a></li>
+              <li class="m-menu__item" data-menuanchor="reviews"><a href="#reviews" class="m-menu__link">Отзывы</a></li>
+              <li class="m-menu__item" data-menuanchor="contacts"><a href="#contacts" class="m-menu__link">Контакты</a></li>
             </ul>
             <a href="tel:+7(812)6221571" class="m-menu__phone">+7 812 622 15 71</a>
             <a href="mailto:info@travel2business.ru" class="m-menu__email">info@travel2business.ru</a>
@@ -133,7 +133,7 @@
                потребности при планировании деловой поездки и организации мероприятия любой
                 сложности. Наш опыт и профессионализм подтверждены не только годами работы,
                  но и тысячами довольных клиентов.</p>
-            <a href="#form" class="about__link button">Стать клиентом</a>
+            <a href="#contacts" class="about__link button">Стать клиентом</a>
             </div>
           </div>
           <div class="about__right-col">
@@ -292,13 +292,7 @@
           <div class="reviews__clients clients">
             <ul id="clientSlider" class="clients__list">
               <li class="clients__item">
-                <img src="img/clients/cpr.jpg" alt="gazprom" width="66" height="56">
-              </li>
-              <li class="clients__item">
                 <img src="img/clients/gazprom.jpg" alt="lukoil" width="120" height="56">
-              </li>
-              <li class="clients__item">
-                <img src="img/clients/gis.jpg" alt="gis" width="123" height="56">
               </li>
               <li class="clients__item">
                 <img src="img/clients/lukoil.jpg" alt="nmlk" width="247" height="56">
@@ -307,7 +301,13 @@
                 <img src="img/clients/nmlk.jpg" alt="purneftegaz" width="122" height="56">
               </li>
               <li class="clients__item">
+                <img src="img/clients/gis.jpg" alt="gis" width="123" height="56">
+              </li>
+              <li class="clients__item">
                 <img src="img/clients/purneftegaz.jpg" alt="cpr" width="166" height="56">
+              </li>
+              <li class="clients__item">
+                <img src="img/clients/cpr.jpg" alt="gazprom" width="66" height="56">
               </li>
             </ul>
           </div>
@@ -350,20 +350,20 @@
               <h2 class="form__title">Оставить заявку</h2>
               <h2 class="form__title-mobile">Оставить заявку</h2>
               <label class="form__lable" for="name">
-                <input class="form__input" type="text" name="inputName" id="name" placeholder="Ваше имя">
+                <input class="form__input" type="text" name="inputName" id="name" placeholder="Имя" required>
               </label>
               <label class="form__lable" for="phone">
-                <input class="form__input" name="inputPhone" type="text" id="phone" placeholder="Ваш телефон">
+                <input class="form__input" name="inputPhone" type="text" id="phone" placeholder="Телефон" required>
               </label>
               <label class="form__lable" for="email">
-                <input class="form__input" name="inputEmail" type="email" id="email" placeholder="Ваша почта">
+                <input class="form__input" name="inputEmail" type="email" id="email" placeholder="E-mail" required>
               </label>
               <label class="form__lable" for="comment">Сообщение
-                <textarea class="form__textarea" name="inputTextarea" id="comment" rows="2"></textarea>
+                <textarea class="form__textarea" name="inputTextarea" id="comment" rows="2" required></textarea>
               </label>
-              <input class="form__checkbox" name="inputCheckbox" id="agreement" type="checkbox">
-              <label class="form__check-lable" for="agreement">Принимаю <a class="form__link" href="#">политику конфиденциальности</a></label>
-              <button type="submit" class="form__button button">Отправить заявку</button>
+              <input class="form__checkbox" name="inputCheckbox" id="agree" type="checkbox" required>
+              <label class="form__check-lable" for="agree">Принимаю <a class="form__link" href="policy.html">политику конфиденциальности</a></label>
+              <button type="submit" form="form" class="form__button button">Отправить</button>
             </form>
           </div>
           <div class="contacts__map">
@@ -384,11 +384,12 @@
       </div>
     </div>
   </div>
-  <script src="libs/jquery/dist/jquery.min.js"></script>
+  <script src="libs/jquery/jquery.min.js"></script>
   <script src="libs/svgxuse/svgxuse.min.js"></script>
   <script src="libs/validate/jquery.validate.min.js"></script>
   <script src="libs/mask/jquery.maskedinput.min.js"></script>
   <script src="libs/fullpage/jquery.fullpage.js"></script>
+  <script src="libs/fullpage/scrolloverflow.min.js"></script>
   <script src="libs/slick/slick.min.js"></script>
   <script src="js/main.js"></script>
 </body>

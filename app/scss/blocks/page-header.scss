@@ -15,6 +15,7 @@
   z-index: 5000;
   transform: translateY(0);
   transition: all .3s;
+  z-index: 5600;
 }
 .page-header__wrapper.active {
   transform: translateY(0);
@@ -24,9 +25,11 @@
 }
 .logo__img {
   display: none;
+  transition: all 1.2s;
 }
 .logo__img--dark {
   display: none;
+  transition: all 1.2s;
 }
 .logo__img--dark.active,
 .logo__img.active {
@@ -77,6 +80,7 @@
     width: 140px;
     height: 30px;
     margin-right: 50px;
+    z-index: 200;
   }
 
   body.fp-viewing-offer .logo__img {
@@ -99,55 +103,6 @@
     display: none;
   }
 
-  // body.fp-viewing-about .page-header,
-  // body.fp-viewing-reviews .page-header, {
-  //   background-color: #fff;
-  //   animation: bgfill 1s ease;
-  // }
-
-  // body.fp-viewing-advantages .page-header,
-  // body.fp-viewing-contacts .page-header {
-  //   background-color: #f9f9f9;
-  //   animation: bgfill 1s ease;
-  // }
-  // body.fp-viewing-contacts .page-header {
-  //   background-color: transparent;
-  //   animation: bgfillback .5s ease;
-  // }
-  // @keyframes bgfill {
-  //   0% {
-  //     background-color: transparent;
-  //   }
-  //   50% {
-  //     background-color: transparent;
-  //   }
-  //   60% {
-  //     background-color: transparent;
-  //   }
-  //   70% {
-  //     background-color: transparent;
-  //   }
-  //   80% {
-  //     background-color: transparent;
-  //   }
-  //   90% {
-  //     background-color: #fff;
-  //   }
-  //   100% {
-  //     background-color: transparent;
-  //   }
-  // }
-  // @keyframes bgfillback {
-  //   0% {
-  //     background-color: #fff;
-  //   }
-  //   50% {
-  //     background-color: #fff;
-  //   }
-  //   100% {
-  //     background-color: transparent;
-  //   }
-  // }
   .page-header__navigation {
     display: block;
     margin-left: auto;

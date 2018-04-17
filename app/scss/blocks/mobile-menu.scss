@@ -13,8 +13,8 @@
 .menu-btn .burger {
   position: relative;
   display: block;
-  width: 40px;
-  height: 4px;
+  width: 35px;
+  height: 2px;
   background-color: #fff;
   outline: none; 
 }
@@ -31,8 +31,8 @@
   position: absolute;
   content: '';
   display: block;
-  width: 40px;
-  height: 4px;
+  width: 35px;
+  height: 2px;
   background-color: inherit;
   transition: all .3s ease;
 }
@@ -90,7 +90,13 @@
   font-size: 32px;
   line-height: 43px;
   color: #000;
+  margin-bottom: 10px;
 }
+.m-menu__link:last-child {
+  margin-bottom: 0;
+}
+
+
 .m-menu__email,
 .m-menu__phone {
   align-self: flex-start;
@@ -100,6 +106,9 @@
   font-size: 16px;
   line-height: 22px;
   color: #000;
+}
+.m-menu__phone {
+  margin-top: 0;
 }
 .m-menu__link:hover,
 .m-menu__email:hover,

@@ -1,3 +1,6 @@
+.legalpage .page-header {
+  background-color: #fff;
+}
 .legalpage .page-header a {
   color: #000;
 }
@@ -18,36 +21,113 @@
   width: auto;
 }
 .legalpage .page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
   min-width: 320px;
   padding: 0 20px;
 }
 .legalpage .page-footer__item {
   display: flex;
+  flex-direction: column;
+  margin-top: 20px;
   font-size: 16px;
   line-height: 22px;
 }
 .legalpage .page-footer__text {
   color: #000;
+  margin-bottom: 20px;
 }
 .legalpage .page-footer__phone,
 .legalpage .page-footer__email {
   color: #000;
+  margin-bottom: 20px;
+}
+.legalpage .menu-btn {
+  position: fixed;
+  right: 20px;
+  top: 30px;
+  display: block;
+  z-index: 30;
+  outline: none; 
+}
+.legalpage .menu-btn .burger {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  outline: none; 
+}
+.legalpage .menu-btn .burger--dark {
+  background-color: #000;
+}
+.legalpage .menu-btn .burger--dark:before,
+.legalpage .menu-btn .burger--dark:after {
+  background: #000;
+}
+
+.legalpage .menu-btn .burger:before, 
+.legalpage .menu-btn .burger:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 40px;
+  height: 4px;
+  background-color: inherit;
+  transition: all .3s ease;
+}
+.legalpage .menu-btn .burger:before {
+  top: -9px;
+}
+.legalpage .menu-btn .burger:after {
+  top: 9px;
+}
+.legalpage .menu-btn .burger.active {
+  background: transparent; 
+}
+.legalpage .menu-btn .burger.active:before,
+.legalpage .menu-btn .burger.active:after {
+  background: #C50B1E;
+}
+.legalpage .menu-btn .burger.active:after {
+  transform: rotate(-45deg);
+  top: 0px;
+}
+.legalpage .menu-btn .burger.active:before {
+  transform: rotate(45deg);
+  top: 0px;
 }
 @media (min-width: $tablet-width) {
   .legalpage .page-footer {
     width: auto;
   }
   .legalpage .page-footer__wrapper {
+    flex-direction: row;
     width: 768px;
     margin: 0 auto;
     padding-left: 100px;
     padding-top: 80px;
     padding-right: 40px;
   }
+  .legalpage .page-footer__item {
+    margin-top: 20px;
+    flex-direction: row;
+  }
   .legalpage .page-footer__title {
     height: 65px;
     font-family: OpenSans;
     font-size: 48px;
+  }
+  .legalpage .page-footer__text {
+    color: #000;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+  .legalpage .page-footer__phone,
+  .legalpage .page-footer__email {
+    color: #000;
+    margin-bottom: 0;
+    margin-right: 20px;
   }
 }
 @media (min-width: $laptop-width) {

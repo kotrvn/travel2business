@@ -4,7 +4,7 @@ $(document).ready(function() {
     $('#fullpage').fullpage({
       menu: '#menu',
       anchors: ['offer', 'about', 'advantages', 'reviews', 'contacts'],
-      scrollOverflow: false,
+      scrollOverflow: true,
       navigation: true,
     });
   }
@@ -31,12 +31,28 @@ $(document).ready(function() {
       infinite: true,
       mobileFirst: true,
       arrows: false,
-      slidesToShow: 2,
+      slidesToShow: 1,
       autoplay: true,
-      autoplaySpeed: 1500,
+      autoplaySpeed: 2000,
       responsive: [
         {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            draggable: true,
+          }
+        },
+        {
           breakpoint: 767,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 2,
+            draggable: false,
+          }
+        },
+        {
+          breakpoint: 960,
           settings: {
             slidesToShow: 5,
             slidesToScroll: 2,
@@ -56,12 +72,12 @@ $(document).ready(function() {
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
-      autoplay: true,
-      autoplaySpeed: 5000,
       responsive: [
         {
           breakpoint: 767,
           settings: {
+            autoplay: true,
+            autoplaySpeed: 5000,
             draggable: false,
             dots: false
           }
@@ -104,17 +120,27 @@ $(document).ready(function() {
       ]
     });
 
-  // Меню на телефоне
-    $('.menu-btn').on('click', function(e) {
-      $('.burger').toggleClass('active');
-      $('.m-menu').toggleClass('m-menu-show');
-    });
+    // Меню на телефоне 
+      $('.menu-btn').on('click', function(e) { 
+        $('.burger').toggleClass('active'); 
+        $('.m-menu').toggleClass('m-menu-show'); 
 
+        if ( $('.m-menu').hasClass('m-menu-show') ) { 
+        $("body").css("overflow","hidden"); 
+        } else { 
+        $("body").css("overflow","auto"); 
+        } 
+
+        if ($(window).scrollTop() < 480) { 
+        $('.logo__img').toggleClass('active'); 
+        $('.logo__img--dark').toggleClass('active'); 
+      } 
+    });
 
   // Фиксированный хэдэр
 
     $(window).scroll(function(){
-      if ($(this).scrollTop() > 480) {
+      if ($(this).scrollTop() > 500) {
         $('.page-header').addClass('sticked');
         $("[data-logo='red']").removeClass('active');
         $("[data-logo='blue']").addClass('active');
@@ -126,27 +152,43 @@ $(document).ready(function() {
         $('.burger').removeClass('burger--dark');
       }
   });
-  // function menuLogo() {
-  //    if($('.menu-btn .burger').hasClass('active')) {
-  //     $("[data-logo='blue']").addClass('active');
-  //     $("[data-logo='red']").removeClass('active');
-  //     }
-  // };
+    
+  // Аякс форма)
+  $(document).ready(function() {
 
-  // menuLogo();
-  
-  $('.form__button').on('click', function(){
-    $('#popup').toggleClass('active');
-    $('.popup__overlay').toggleClass('popup__overlay--show');
-    $('.popup__item').toggleClass('active');
+  //E-mail Ajax Send
+  $("#form").submit(function() { //Change
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: "mail.php", //Change
+      data: th.serialize()
+    }).done(function() {
+      
+      setTimeout(function() {
+        // Done Functions
+        th.trigger("reset");
+      }, 1000);
+    });
+    return false;
+    
   });
-
-  $('.popup__close').on('click', function(){
-    $('#popup').toggleClass('active');
-    $('.popup__overlay').toggleClass('popup__overlay--show');
-    $('.popup__item').toggleClass('active');
+  //при нажатию на любую кнопку, имеющую класс .btn
+  $(".form__button").click(function() {
+    //открыть модальное окно с id="myModal"
+    $("#popup").addClass('active');
+      $("#popup__close").click(function() {
+        $("#popup").removeClass('active');
+      });
+    });
   });
+  // маска для телефона
+  $("#phone").mask("+7(999) 999-99-99");
 
+  $('.m-menu__link').on('click', function() {
+     $('.burger').removeClass('active');
+     $('.m-menu').removeClass('m-menu-show');
+  });
 
 
   if ($(window).width() < 768) {
@@ -169,129 +211,6 @@ $(document).ready(function() {
     }
     else {
       return;
-  }
-
-  $('.m-menu__link').on('click', function() {
-     $('.burger').removeClass('active');
-     $('.m-menu').removeClass('m-menu-show');
-  });
-
-
-  if ($('.m-menu').hasClass('m-menu-show')) {
-    $('.logo__img--dark').removeClass('active');
-    $('.logo__img').addClass('active');
-  } else {
-    return;
-  }
-  
-  var header = $(".page-header"); // Меню
-  var scrollPrev = 0 // Предыдущее значение скролла
-  
-  $(window).scroll(function() {
-    var scrolled = $(window).scrollTop(); // Высота скролла в px
-    var firstScrollUp = false; // Параметр начала сколла вверх
-    var firstScrollDown = false; // Параметр начала сколла вниз
-    
-    // Если скроллим
-    if ( scrolled > 0 ) {
-      // Если текущее значение скролла > предыдущего, т.е. скроллим вниз
-      if ( scrolled > scrollPrev ) {
-        firstScrollUp = false; // Обнуляем параметр начала скролла вверх
-        // Если меню видно
-        if ( scrolled < header.height() + header.offset().top ) {
-          // Если только начали скроллить вниз
-          if ( firstScrollDown === false ) {
-            var topPosition = header.offset().top; // Фиксируем текущую позицию меню
-            header.css({
-              "top": topPosition + "px"
-            });
-            firstScrollDown = true;
-          }
-          // Позиционируем меню абсолютно
-          header.css({
-            "position": "absolute"
-          });
-        // Если меню НЕ видно
-        } else {
-          // Позиционируем меню фиксированно вне экрана
-          header.css({
-            "position": "fixed",
-            "top": "-" + header.height() + "px"
-          });
-        }
-        
-      // Если текущее значение скролла < предыдущего, т.е. скроллим вверх
-      } else {
-        firstScrollDown = false; // Обнуляем параметр начала скролла вниз
-        // Если меню не видно
-        if ( scrolled > header.offset().top ) {
-          // Если только начали скроллить вверх
-          if ( firstScrollUp === false ) {
-            var topPosition = header.offset().top; // Фиксируем текущую позицию меню
-            header.css({
-              "top": topPosition + "px"
-            });
-            firstScrollUp = true;
-          }
-          // Позиционируем меню абсолютно
-          header.css({
-            "position": "absolute"
-          });
-        } else {
-          // Убираем все стили
-          header.removeAttr("style");
-        }
-      }
-      // Присваеваем текущее значение скролла предыдущему
-      scrollPrev = scrolled;
-    } 
-  });
-  // Валидация формы 
-  $('#form').validate({
-          rules: {
-            inputName: {
-              required: true,
-              minlength: 2
-            },
-            inputPhone: {
-              required: true,
-            },
-            inputEmail: {
-              required: true,
-              email: true
-            },
-            inputTextarea: {
-              required: true
-            },
-            inputCheckbox: {
-              required: true
-            }
-          },
-          messages: {
-            inputName: {
-              required: 'Введите ваше имя',
-              minlength: 'Слишком короткое имя'
-            },
-            inputPhone: {
-              required: 'Введите ваш телефон'
-            },
-            inputEmail: {
-              required: 'Введите ваш еmail',
-              email: 'Введите корректный email'
-            },
-            inputTextarea: {
-              required: 'Введите ваше сообщение'
-            },
-            inputCheckbox: {
-              required: 'Примите пользовательское соглашение'
-            }
-          },
-          submitHandler: function() {
-            $('')
-          }
-
-  });
-  // Вот вам маска для телефона
-  $("#phone").mask("+7(999) 999-9999");
+  }; 
 });
 

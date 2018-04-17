@@ -20,7 +20,7 @@
   margin-bottom: 20px;
 }
 .legal__img {
-  
+  width: 100%;
 }
 @media (min-width: $tablet-width) {
   .legal {
@@ -34,9 +34,9 @@
     padding-right: 40px;
   }
   .legal__title {
-    height: 65px;
-    font-family: OpenSans;
+    font-family: "Open Sans", 'Arial', sans-serif;
     font-size: 48px;
+    line-height: 65px;
   }
 }
 @media (min-width: $laptop-width) {
