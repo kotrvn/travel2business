@@ -27,35 +27,35 @@
   <header id="header" class="page-header">
       <div class="page-header__wrapper active">
         <h1 class="visually-hidden">Travel2Buissnes - Регион сервиc</h1>
-        <a href="index.html" class="page-header__logo logo">
-          <img class="logo__img" data-logo="blue" src="img/logo.svg" alt="Логотип компании - Travel2Buissnes">
+        <a href="index.html" data-menuanchor="offer" class="page-header__logo logo">
+          <img class="logo__img active" data-logo="blue" src="img/logo.svg" alt="Логотип компании - Travel2Buissnes">
         </a>
         <nav class="page-header__navigation nav">
           <ul class="nav__list" id="menu">
-            <li data-menuanchor="about" class="nav__item"><a href="index.html#about" class="nav__link">О компании</a></li>
-            <li data-menuanchor="advantages" class="nav__item"><a href="index.html#advantages" class="nav__link">Почему мы</a></li>
-            <li data-menuanchor="reviews" class="nav__item"><a href="index.html#reviews" class="nav__link">Отзывы</a></li>
-            <li data-menuanchor="contacts" class="nav__item"><a href="index.html#contacts" class="nav__link">Контакты</a></li>
+            <li class="nav__item" data-menuanchor="about"><a href="index.html#about" class="nav__link">О компании</a></li>
+            <li class="nav__item" data-menuanchor="advantages" ><a href="index.html#advantages" class="nav__link">Почему мы</a></li>
+            <li class="nav__item" data-menuanchor="reviews"><a href="index.html#reviews" class="nav__link">Отзывы</a></li>
+            <li class="nav__item" data-menuanchor="contacts"><a href="index.html#contacts" class="nav__link">Контакты</a></li>
           </ul>
         </nav>
         <div class="mobile-menu js-mobile-menu">
           <button class="menu-btn">
             <span class="burger"></span>
           </button>
-          <div class="m-menu">
+          <div id="mobileMenu" class="m-menu">
             <ul class="m-menu__list">
-              <li data-menuanchor="about" class="m-menu__item"><a href="index.html#about" class="m-menu__link">О компании</a></li>
-              <li data-menuanchor="about" class="m-menu__item"><a href="index.html#offerBottom" class="m-menu__link">Услуги</a></li>
-              <li data-menuanchor="advantages" class="m-menu__item"><a href="index.html#advantages" class="m-menu__link">Почему мы</a></li>
-              <li data-menuanchor="reviews" class="m-menu__item"><a href="index.html#reviews" class="m-menu__link">Отзывы</a></li>
-              <li data-menuanchor="contacts" class="m-menu__item"><a href="index.html#contacts" class="m-menu__link">Контакты</a></li>
+              <li class="m-menu__item" data-menuanchor="about"><a href="index.html#about" class="m-menu__link">О компании</a></li>
+              <li class="m-menu__item" data-menuanchor="offerBottom"><a href="index.html#offerBottom" class="m-menu__link">Услуги</a></li>
+              <li class="m-menu__item" data-menuanchor="advantages"><a href="index.html#advantages" class="m-menu__link">Почему мы</a></li>
+              <li class="m-menu__item" data-menuanchor="reviews"><a href="index.html#reviews" class="m-menu__link">Отзывы</a></li>
+              <li class="m-menu__item" data-menuanchor="contacts"><a href="index.html#contacts" class="m-menu__link">Контакты</a></li>
             </ul>
             <a href="tel:+7(812)6221571" class="m-menu__phone">+7 812 622 15 71</a>
             <a href="mailto:info@travel2business.ru" class="m-menu__email">info@travel2business.ru</a>
           </div>
         </div>
         <div class="page-header__links links-buttons">
-          <a href="#form" class="links-buttons__phone button">+7 812 622 15 71</a>
+          <a href="tel:+7(812)6221571" class="links-buttons__phone button">+7 812 622 15 71</a>
           <a href="mailto:info@travel2business.ru" class="links-buttons__email button">info@travel2business.ru</a>
         </div>
       </div>
@@ -68,20 +68,20 @@
            Юридический адрес: 197376, Санкт-Петербург, ул.Профессора Попова д.23<br>
            ОГРН 1107847127519     ИНН 7813470069     КПП 781301001<br>
            Р/с 40702810163030003806 в СПбФ  №2 ПАО «БИНБАНК» г. Санкт-Петербург<br>
-           к/сч 30101810800000000722 БИК 044030722<br>
-           ОКПО 65960024    ОКВЭД  63.30, 74.1   ОКАТО 40288564000   ОКТМО 40393000</p>
+           к/сч 30101810040300000897 БИК 044030897<br>
+           ОКПО 65960024 ОКВЭД  63.30, 74.1   ОКАТО 40288564000   ОКТМО 40393000</p>
           <p class="legal__text">Генеральный директор: Виноградов Сергей Васильевич</p>
           <p class="legal__text">Свидетельство Ростуризма о включении в Федеральный реестр туроператоров РТО №010799</p>
           <img src="img/license.jpg" alt="лицензия" class="legal__image" width="530" height="774">
       </div>
     </section>
   </main>
-
-  <script src="libs/jquery/dist/jquery.min.js"></script>
+  <script src="libs/jquery/jquery.min.js"></script>
   <script src="libs/svgxuse/svgxuse.min.js"></script>
   <script src="libs/validate/jquery.validate.min.js"></script>
   <script src="libs/mask/jquery.maskedinput.min.js"></script>
   <script src="libs/fullpage/jquery.fullpage.js"></script>
+  <script src="libs/fullpage/scrolloverflow.min.js"></script>
   <script src="libs/slick/slick.min.js"></script>
   <script src="js/main.js"></script>
 </body>

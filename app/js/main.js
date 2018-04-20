@@ -154,33 +154,23 @@ $(document).ready(function() {
   });
     
   // Аякс форма)
-  $(document).ready(function() {
-
-  //E-mail Ajax Send
-  $("#form").submit(function() { //Change
-    var th = $(this);
+  $("#form").submit(function() {
     $.ajax({
       type: "POST",
-      url: "mail.php", //Change
-      data: th.serialize()
+      url: "mail.php",
+      data: $(this).serialize()
     }).done(function() {
-      
-      setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-      }, 1000);
-    });
-    return false;
-    
-  });
-  //при нажатию на любую кнопку, имеющую класс .btn
-  $(".form__button").click(function() {
-    //открыть модальное окно с id="myModal"
-    $("#popup").addClass('active');
-      $("#popup__close").click(function() {
-        $("#popup").removeClass('active');
+      $(this).find("input").val("");
+        $("#popup").addClass('active');
+        $("body").css("overflow","hidden");
+        $("#form").trigger("reset");
       });
-    });
+    return false;
+  });
+
+  $(".popup__close").click(function() {
+      $("#popup").removeClass('active');
+      $("body").css("overflow","auto"); 
   });
   // маска для телефона
   $("#phone").mask("+7(999) 999-99-99");
@@ -188,6 +178,7 @@ $(document).ready(function() {
   $('.m-menu__link').on('click', function() {
      $('.burger').removeClass('active');
      $('.m-menu').removeClass('m-menu-show');
+     $('body').css("overflow","auto");
   });
 
 
