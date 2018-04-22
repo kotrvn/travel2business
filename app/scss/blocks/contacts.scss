@@ -100,6 +100,11 @@ label[for=comment] {
   display: block;
   width: 100%;
   position: relative;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  z-index: 0;
+  padding: 0;
   margin: 0;
   margin-bottom: -67px;
 }
@@ -126,7 +131,7 @@ label[for=comment] {
 .form__check-lable:after {
   content: '';
   position: absolute;
-  top: 4px;
+  top: 3px;
   left: 1px;
   display: none;
   width: 15px;

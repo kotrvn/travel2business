@@ -5,6 +5,7 @@ $(document).ready(function() {
       menu: '#menu',
       anchors: ['offer', 'about', 'advantages', 'reviews', 'contacts'],
       scrollOverflow: true,
+      normalScrollElements: '#reviews',
       navigation: true,
     });
   }
@@ -162,7 +163,6 @@ $(document).ready(function() {
     }).done(function() {
       $(this).find("input").val("");
         $("#popup").addClass('active');
-        $("body").css("overflow","hidden");
         $("#form").trigger("reset");
       });
     return false;
@@ -170,8 +170,8 @@ $(document).ready(function() {
 
   $(".popup__close").click(function() {
       $("#popup").removeClass('active');
-      $("body").css("overflow","auto"); 
   });
+
   // маска для телефона
   $("#phone").mask("+7(999) 999-99-99");
 
@@ -180,8 +180,6 @@ $(document).ready(function() {
      $('.m-menu').removeClass('m-menu-show');
      $('body').css("overflow","auto");
   });
-
-
   if ($(window).width() < 768) {
     $('section').removeAttr('id', 'section0');
     $('section').removeAttr('id', 'section1');
