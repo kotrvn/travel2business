@@ -34,7 +34,7 @@ $(document).ready(function() {
       arrows: false,
       slidesToShow: 1,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 1500,
       responsive: [
         {
           breakpoint: 480,
@@ -49,7 +49,7 @@ $(document).ready(function() {
           settings: {
             slidesToShow: 3,
             slidesToScroll: 2,
-            draggable: false,
+            draggable: true,
           }
         },
         {
@@ -57,7 +57,7 @@ $(document).ready(function() {
           settings: {
             slidesToShow: 5,
             slidesToScroll: 2,
-            draggable: false,
+            draggable: true,
           }
         }
       ]
