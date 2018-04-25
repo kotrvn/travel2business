@@ -6,6 +6,7 @@ $(document).ready(function() {
       anchors: ['offer', 'about', 'advantages', 'reviews', 'contacts'],
       scrollOverflow: true,
       normalScrollElements: '#reviews',
+      scrollingSpeed: 1000,
       navigation: true,
     });
   }
@@ -162,16 +163,37 @@ $(document).ready(function() {
       data: $(this).serialize()
     }).done(function() {
       $(this).find("input").val("");
-        $("#popup").addClass('active');
+        $("#thankYou").addClass('active');
+        $.fn.fullpage.setMouseWheelScrolling(false);
         $("#form").trigger("reset");
       });
     return false;
   });
 
   $(".popup__close").click(function() {
-      $("#popup").removeClass('active');
+      $(".popup").removeClass('active');
+      $.fn.fullpage.setMouseWheelScrolling(true);
+  });
+  // Открытие попапа
+  $(".js-policy-popup").click(function(e) {
+      e.preventDefault();
+      $("#policy").addClass('active');
+      $.fn.fullpage.setMouseWheelScrolling(false);
+  });
+  // Закрытие попапа
+  $(".js-agree-close").click(function(f) {
+    f.preventDefault();
+    $(".popup").removeClass('active');
+    $(".form__checkbox").prop('checked',true);
+    $.fn.fullpage.setMouseWheelScrolling(true);
   });
 
+  $(".agree__button--cancel").click(function(c) {
+      c.preventDefault();
+      $(".form__checkbox").prop('checked', false);
+      $(".popup").removeClass('active');
+      $.fn.fullpage.setMouseWheelScrolling(true);
+  });
   // маска для телефона
   $("#phone").mask("+7(999) 999-99-99");
 
@@ -180,6 +202,7 @@ $(document).ready(function() {
      $('.m-menu').removeClass('m-menu-show');
      $('body').css("overflow","auto");
   });
+  
   if ($(window).width() < 768) {
     $('section').removeAttr('id', 'section0');
     $('section').removeAttr('id', 'section1');
@@ -200,6 +223,9 @@ $(document).ready(function() {
     }
     else {
       return;
-  }; 
+  };
+
 });
+
+
 

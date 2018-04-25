@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: calc(100% + 40px);
   padding: 0 20px;
   overflow: auto;
   z-index: 1000000;
@@ -47,6 +47,7 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
 }
 .popup__overlay--show {
   display: block;
@@ -95,5 +96,100 @@
 @media (min-width: $tablet-width) {
   .popup__item {
     width: 370px;
+  }
+}
+
+// Политика конфидециальности 
+.policy {
+  border-radius: 0;
+  position: relative;
+  width: 100%;
+  height: 95%;
+  padding: 5px;
+  text-align: left;
+  overflow-y: scroll;
+}
+body + .policy.active {
+  overflow: hidden;
+}
+.popup__item .policy__title {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding: 0;
+  color: #000;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.popup__item .policy__subtitle {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 0;
+  color: #000;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+}
+.policy__text {
+  font-size: 10px;
+  line-height: 16px;
+  margin-bottom: 100px;
+}
+.policy__text a {
+  color: #000;
+}
+.agree__button {
+  display: block;
+  background-color: #C50B1E;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-family: "Open Sans", 'Arial', sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: normal;
+  color: #fff;
+}
+.agree__button--cancel {
+  margin-top: 0;
+}
+.agree__button:hover {
+  background-color: #B01122;
+}
+@media (min-width: $tablet-width) {
+  .policy {
+    width: 90%;
+    height: 65%;
+    padding: 15px;
+  }
+  .agree__button {
+    background-color: #C50B1E;
+    width: 160px;
+  }
+  .popup__item .policy__title {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .popup__item .policy__subtitle {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .policy__text {
+    font-size: 14px;
+    line-height: 20px;
+
+  }
+  .agree__button {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  .agree__button--cancel {
+    display: inline-block;
+    margin-top: 30px;
   }
 }

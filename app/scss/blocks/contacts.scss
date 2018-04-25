@@ -100,8 +100,10 @@ label[for=comment] {
   display: block;
   width: 100%;
   position: relative;
-  width: 0;
-  height: 0;
+  width: 100px;
+  height: 1px;
+  background-color: transparent;
+  border-color: transparent;
   opacity: 0;
   z-index: 0;
   padding: 0;

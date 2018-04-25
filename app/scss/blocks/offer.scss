@@ -2,6 +2,7 @@
   background-image: none;
   padding: 0;
   margin: 0;
+  background-color: #4a4a4a;
 }
 
 .offer__wrapper {
@@ -14,8 +15,7 @@
   width: 100%;
   height: 100vh;
   padding: 220px 20px 250px;
-  margin-bottom: 50px;
-  background-image: url(../../img/header__bg.jpg);
+  background-image: url(../../img/header__bg--crop.jpg);
   background-repeat: no-repeat; 
   background-position: 70% 0;
   background-size: cover;
@@ -43,7 +43,8 @@
   background-color: #d73a4a;
 }
 .offer__bottom {
-  padding: 0 20px;
+  background-color: #fff;
+  padding: 50px 20px 0;
   margin-bottom: 50px;
 }
 .offer-mobile__title {
@@ -135,6 +136,7 @@
     background: none;
   }
   .offer__bottom {
+    background-color: transparent;
     height: 35%;
     margin: 0;
     padding: 0;
