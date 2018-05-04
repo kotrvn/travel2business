@@ -174,18 +174,29 @@ $(document).ready(function() {
       $(".popup").removeClass('active');
       $.fn.fullpage.setMouseWheelScrolling(true);
   });
+
+
   // Открытие попапа
   $(".js-policy-popup").click(function(e) {
       e.preventDefault();
       $("#policy").addClass('active');
       $.fn.fullpage.setMouseWheelScrolling(false);
   });
+
+
   // Закрытие попапа
   $(".js-agree-close").click(function(f) {
     f.preventDefault();
     $(".popup").removeClass('active');
     $(".form__checkbox").prop('checked',true);
     $.fn.fullpage.setMouseWheelScrolling(true);
+  });
+
+  // Попап с реквизитами
+  $(".js-legal-popup").click(function(t) {
+      t.preventDefault();
+      $("#legal").addClass('active');
+      $.fn.fullpage.setMouseWheelScrolling(false);
   });
 
   $(".agree__button--cancel").click(function(c) {

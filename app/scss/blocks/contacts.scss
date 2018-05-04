@@ -57,7 +57,7 @@
 .form__input {
   display: block;
   width: 290px;
-  margin-top: 20px;
+  margin-top: 25px;
   border: none;
   border-bottom: 1px solid #979797;
   padding: 5px 0px;
@@ -70,8 +70,8 @@
 }
 
 label[for=comment] {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .form__textarea {
@@ -114,6 +114,7 @@ label[for=comment] {
 .form__checkbox + .form__check-lable {
   position: relative;
   margin-top: 50px;
+  margin-bottom: 15px;
   padding: 0 0 0 25px;
   cursor: pointer;
 }
@@ -163,7 +164,7 @@ label[for=comment] {
 .form__button {
   width: 180px;
   display: inline-block;
-  margin-top: 25px;
+  margin-top: 15px;
   padding: 10px 20px;
   background: none;
   border: solid 1px transparent;
@@ -176,11 +177,6 @@ label[for=comment] {
   transition: all .3s;
 }
 
-.error {
-  font-size: 12px;
-  color: #C50B1E;
-  margin-bottom: 10px;
-}
 
 ::-webkit-input-placeholder {
   color:#787878;
@@ -340,7 +336,7 @@ label[for=comment] {
 
   .form__title {
     display: block;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     font-size: 24px;
     line-height: 33px;
     font-weight: normal;
@@ -420,7 +416,7 @@ label[for=comment] {
 
   .form {
     position: absolute;
-    top: 125px;
+    top: 115px;
     left: 50%;
     right: 50%;
     display: block;
@@ -440,6 +436,7 @@ label[for=comment] {
   .social__private a {
     margin-right: 20px;
     margin-bottom: 60px;
+    cursor: pointer;
   }
 }
 @media (min-width: $desctop-width) {
@@ -500,7 +497,7 @@ label[for=comment] {
     color: #000;
   }
   .form {
-    padding: 30px 40px 50px;
+    padding: 25px 40px 35px;
     width: 370px;
     transform: translateX(-185px);
   }

@@ -1,65 +1,75 @@
 .legal {
-  width: auto;
+  width: 100%;
+  height: 60%;
+  padding: 5px;
+
 }
 .legal__wrapper {
-  min-width: 320px;
-  padding: 0 20px;
+  padding-top: 30px;
   text-align: left;
 }
+
 .legal__title {
-  margin-top: 60px;
-  margin-bottom: 30px;
-  font-family: "Open Sans", 'Arial', sans-serif;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 15px;
 }
 .legal__text {
-  font-family: "Open Sans", 'Arial', sans-serif;
-  font-size: 16px;
-  line-height: 22px;
-  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 14px;
 }
-.legal__img {
-  width: 100%;
-}
+.legal__image {
+    width: 370px;
+    height: 280px;
+  }
 @media (min-width: $tablet-width) {
   .legal {
-    width: auto;
+    width: 95%;
+    height: 70%;
+    padding: 15px;
   }
   .legal__wrapper {
-    width: 768px;
-    margin: 0 auto;
-    padding-left: 100px;
-    padding-top: 80px;
-    padding-right: 40px;
+    padding-top: 0;
+    text-align: left;
   }
   .legal__title {
-    font-family: "Open Sans", 'Arial', sans-serif;
-    font-size: 48px;
-    line-height: 65px;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+  .legal__text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .legal__image {
+    width: 400px;
+    height: 370px;
   }
 }
 @media (min-width: $laptop-width) {
   .legal {
-    width: auto;
+    width: 40%;
+    height: 75%;
+    padding: 30px;
   }
-  .legal__wrapper {
-    width: 1024px;
-    margin: 0 auto;
-    padding-left: 100px;
-    padding-top: 80px;
-    padding-right: 40px;
+
+  .legal__title {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+  .legal__text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .legal__image {
+    width: 430px;
+    height: 320px;
   }
 }
 @media (min-width: $desctop-width) {
-  .legal {
-    width: auto;
-  }
-  .legal__wrapper {
-    width: 1280px;
-    margin: 0 auto;
-    padding-left: 155px;
-    padding-top: 80px;
-    padding-right: 40px;
+  .legal__image {
+    width: 450px;
+    height: 400px;
   }
 }
